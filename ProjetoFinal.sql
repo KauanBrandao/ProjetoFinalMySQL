@@ -142,6 +142,62 @@ INSERT INTO usuarios (nome, email, cpf, telefone, tipo_deficiencia, formacao, ex
 ('Elaine Castro', 'elaine.castro49@example.com', '900.900.900-09', '(41) 91123-5689', 'nenhuma', 'Graduação em Direito', '2 anos em advocacia', 'Argumentação Jurídica, Pesquisa, Redação', 'curriculo_elaine.pdf', '1992-12-15'),
 ('Fernando Silva', 'fernando.silva50@example.com', '011.011.011-11', '(51) 92123-5690', 'visual', 'Graduação em Ciências Contábeis', '6 anos como contador', 'Contabilidade, Auditoria, Análise Financeira', 'curriculo_fernando.pdf', '1988-05-30');
 
+
+INSERT INTO usuarios (nome, email, cpf, telefone, tipo_deficiencia, formacao, experiencia, habilidades, curriculo, datanascimento) VALUES
+('Alberto Machado', 'alberto.machado351@example.com', '132.333.444-55', '(11) 93212-3456', 'nenhuma', 'Graduação em História', '5 anos como professor', 'Didática, Pesquisa, Comunicação', 'curriculo_alberto.pdf', '1985-04-13'),
+('Bianca Ribeiro', 'bianca.riibeiro52@example.com', '133.434.555-66', '(21) 94321-4567', 'auditiva', 'Graduação em Artes', '3 anos como designer', 'Photoshop, Illustrator, Criatividade', 'curriculo_bianca.pdf', '1990-11-03'),
+('Caio Martins', 'caio.martins53@example.com', '144.555.666-77', '(31) 95432-5678', 'física', 'Graduação em Administração', '4 anos em gestão financeira', 'Organização, Planejamento, Finanças', 'curriculo_caio.pdf', '1992-06-24'),
+('Diana Souza', 'diana.souza54@example.com', '155.666.777-88', '(41) 96543-6789', 'visual', 'Graduação em Psicologia', '6 anos como psicóloga clínica', 'Psicoterapia, Escuta Ativa, Empatia', 'curriculo_diana.pdf', '1987-03-10'),
+('Eduardo Nunes', 'eduardo.nunes55@example.com', '166.777.888-99', '(51) 97654-7890', 'nenhuma', 'Ensino Técnico em Eletrônica', '3 anos em manutenção', 'Eletrônica, Análise de Circuitos, Solução de Problemas', 'curriculo_eduardo.pdf', '1994-09-02'),
+('Fernanda Silva', 'fernanda.silva56@example.com', '177.888.999-11', '(61) 98765-8901', 'auditiva', 'Graduação em Economia', '5 anos em análise de dados', 'Análise, Planejamento, Excel', 'curriculo_fernanda.pdf', '1991-08-14'),
+('Guilherme Santos', 'guilherme.santos57@example.com', '188.999.111-22', '(71) 99876-9012', 'nenhuma', 'Ensino Médio Completo', '2 anos em vendas', 'Comunicação, Negociação, Persuasão', 'curriculo_guilherme.pdf', '1988-12-08'),
+('Helena Souza', 'helena.souza58@example.com', '199.111.222-33', '(81) 90987-0123', 'visual', 'Graduação em Pedagogia', '6 anos como professora', 'Ensino Infantil, Didática, Planejamento', 'curriculo_helena.pdf', '1992-10-10'),
+('Igor Almeida', 'igor.almeida59@example.com', '200.222.333-44', '(91) 90123-2345', 'física', 'Ensino Técnico em Informática', '3 anos em suporte técnico', 'Configuração, Suporte ao Cliente', 'curriculo_igor.pdf', '1989-05-25'),
+('Jéssica Lima', 'jessica.lima60@example.com', '211.333.444-55', '(11) 90234-3456', 'auditiva', 'Graduação em Serviço Social', '4 anos em atendimento', 'Empatia, Comunicação, Organização', 'curriculo_jessica.pdf', '1993-02-14'),
+('Kaique Ribeiro', 'kaique.ribeiro61@example.com', '222.444.555-66', '(21) 91345-4567', 'nenhuma', 'Graduação em Engenharia', '2 anos em engenharia de projetos', 'AutoCAD, Cálculos, Planejamento', 'curriculo_kaique.pdf', '1995-09-09'),
+('Lara Batista', 'lara.batista62@example.com', '233.555.666-77', '(31) 92456-5678', 'visual', 'Graduação em Nutrição', '3 anos em consultoria alimentar', 'Nutrição, Educação Alimentar', 'curriculo_lara.pdf', '1994-07-20'),
+('Marcelo Andrade', 'marcelo.andrade63@example.com', '244.666.777-88', '(41) 93567-6789', 'física', 'Ensino Técnico em Mecânica', '5 anos como mecânico', 'Manutenção, Conserto de Equipamentos', 'curriculo_marcelo.pdf', '1986-03-01'),
+('Nayara Barros', 'nayara.barros64@example.com', '255.777.888-99', '(51) 94678-7890', 'nenhuma', 'Graduação em Psicologia', '6 anos como psicóloga organizacional', 'Escuta Ativa, Desenvolvimento Organizacional', 'curriculo_nayara.pdf', '1991-06-15'),
+('Otávio Ferreira', 'otavio.ferreira65@example.com', '266.888.999-11', '(61) 95789-8901', 'auditiva', 'Ensino Médio Completo', '2 anos como atendente', 'Atendimento, Organização, Empatia', 'curriculo_otavio.pdf', '1988-09-14'),
+('Paula Almeida', 'paula.almeida66@example.com', '277.999.111-22', '(71) 96890-9012', 'visual', 'Graduação em Administração', '5 anos em administração de empresas', 'Liderança, Planejamento', 'curriculo_paula.pdf', '1993-12-12'),
+('Renato Gonçalves', 'renato.goncalves67@example.com', '288.111.222-33', '(81) 97901-0123', 'nenhuma', 'Graduação em Física', '4 anos em pesquisa científica', 'Pesquisa, Análise de Dados', 'curriculo_renato.pdf', '1987-11-18'),
+('Sônia Silva', 'sonia.silva68@example.com', '299.222.333-44', '(91) 98012-1234', 'auditiva', 'Graduação em Letras', '7 anos como professora de literatura', 'Didática, Literatura, Comunicação', 'curriculo_sonia.pdf', '1990-05-22'),
+('Tiago Alves', 'tiago.alves69@example.com', '300.333.444-55', '(11) 98123-2345', 'física', 'Graduação em Engenharia Civil', '8 anos em projetos de obras', 'AutoCAD, Planejamento, Gerenciamento', 'curriculo_tiago.pdf', '1985-08-10'),
+('Viviane Moraes', 'viviane.moraes70@example.com', '311.444.555-66', '(21) 98234-3456', 'nenhuma', 'Ensino Técnico em Enfermagem', '5 anos como técnica de enfermagem', 'Cuidados com Pacientes, Auxílio Médico', 'curriculo_viviane.pdf', '1992-01-28'),
+
+('Alfredo Lira', 'alfredo.lira71@example.com', '322.555.666-77', '(31) 98345-4567', 'visual', 'Graduação em Direito', '3 anos como advogado', 'Redação Jurídica, Argumentação', 'curriculo_alfredo.pdf', '1987-04-30'),
+('Beatriz Nogueira', 'beatriz.nogueira72@example.com', '333.666.777-88', '(41) 98456-5678', 'auditiva', 'Graduação em Fisioterapia', '6 anos como fisioterapeuta', 'Reabilitação, Cuidado ao Paciente', 'curriculo_beatriz.pdf', '1990-02-02'),
+('Carlos Silva', 'carlos.silva73@example.com', '344.777.888-99', '(51) 98567-6789', 'nenhuma', 'Graduação em Ciências Contábeis', '4 anos como contador', 'Contabilidade, Planejamento', 'curriculo_carlos.pdf', '1988-08-25'),
+('Daniela Souza', 'daniela.souza74@example.com', '355.888.999-11', '(61) 98678-7890', 'visual', 'Ensino Técnico em Logística', '3 anos em logística', 'Organização, Planejamento, Gerenciamento', 'curriculo_daniela.pdf', '1993-03-12'),
+('Eduardo Vieira', 'eduardo.vieira75@example.com', '366.999.111-22', '(71) 98789-8901', 'auditiva', 'Graduação em Ciências da Computação', '6 anos como desenvolvedor', 'Python, Java, SQL', 'curriculo_eduardo_v.pdf', '1991-11-04'),
+('Fabiana Santos', 'fabiana.santos76@example.com', '377.111.222-33', '(81) 98890-9012', 'física', 'Graduação em Ciências Biológicas', '3 anos em pesquisa biológica', 'Pesquisa, Análise de Amostras', 'curriculo_fabiana.pdf', '1986-07-07'),
+('Gabriel Souza', 'gabriel.souza77@example.com', '388.222.333-44', '(91) 98901-0123', 'nenhuma', 'Ensino Médio Completo', '4 anos em atendimento ao cliente', 'Atendimento, Organização', 'curriculo_gabriel.pdf', '1994-02-15'),
+('Heloísa Martins', 'heloisa.martins78@example.com', '399.333.444-55', '(11) 99012-1234', 'visual', 'Graduação em Química', '5 anos em laboratório', 'Análises Químicas, Solução de Problemas', 'curriculo_heloisa.pdf', '1992-05-30'),
+('Ivo Rocha', 'ivo.rocha79@example.com', '400.444.555-66', '(21) 99123-2345', 'física', 'Ensino Técnico em Mecânica', '4 anos como mecânico', 'Manutenção, Ajuste de Equipamentos', 'curriculo_ivo.pdf', '1989-04-18'),
+('Joana Lopes', 'joana.lopes80@example.com', '411.555.666-77', '(31) 99234-3456', 'nenhuma', 'Graduação em Artes Visuais', '3 anos como ilustradora', 'Ilustração, Desenho', 'curriculo_joana.pdf', '1995-07-14'),
+
+('Kevin Rocha', 'kevin.rocha81@example.com', '422.666.777-88', '(41) 99345-4567', 'visual', 'Ensino Técnico em Eletrônica', '5 anos em suporte técnico', 'Configuração de Sistemas, Manutenção', 'curriculo_kevin.pdf', '1990-03-21'),
+('Livia Castro', 'livia.castro82@example.com', '433.777.888-99', '(51) 99456-5678', 'nenhuma', 'Graduação em Farmácia', '4 anos em farmácia clínica', 'Prescrição, Atendimento ao Cliente', 'curriculo_livia.pdf', '1987-06-06'),
+('Marcos Almeida', 'marcos.almeida83@example.com', '444.888.999-11', '(61) 99567-6789', 'auditiva', 'Graduação em Engenharia de Produção', '6 anos como engenheiro de produção', 'AutoCAD, Planejamento', 'curriculo_marcos.pdf', '1992-02-21'),
+('Natalia Silva', 'natalia.silva84@example.com', '455.999.111-22', '(71) 99678-7890', 'física', 'Graduação em Ciências Sociais', '2 anos como assistente de pesquisa', 'Análise de Dados, Trabalho em Equipe', 'curriculo_natalia.pdf', '1994-08-08'),
+('Otávia Mendes', 'otavia.mendes85@example.com', '466.111.222-33', '(81) 99789-8901', 'nenhuma', 'Ensino Técnico em Administração', '3 anos como auxiliar administrativo', 'Organização, Planejamento', 'curriculo_otavia.pdf', '1990-12-01'),
+('Paulo Martins', 'paulo.martins86@example.com', '477.222.333-44', '(91) 99890-9012', 'visual', 'Graduação em Ciências Contábeis', '4 anos como assistente contábil', 'Contabilidade, Relatórios', 'curriculo_paulo.pdf', '1986-09-25'),
+('Renata Barros', 'renata.barros87@example.com', '488.333.444-55', '(11) 99901-0123', 'auditiva', 'Ensino Técnico em Recursos Humanos', '4 anos em recrutamento', 'Entrevistas, Seleção de Candidatos', 'curriculo_renata.pdf', '1985-11-20'),
+('Simone Vieira', 'simone.vieira88@example.com', '499.444.555-66', '(21) 99012-1234', 'nenhuma', 'Graduação em Moda', '6 anos como estilista', 'Criação, Design', 'curriculo_simone.pdf', '1992-02-05'),
+('Tatiane Souza', 'tatiane.souza89@example.com', '500.555.666-77', '(31) 90123-2345', 'física', 'Graduação em Nutrição', '5 anos como nutricionista', 'Dieta, Educação Nutricional', 'curriculo_tatiane.pdf', '1991-03-18'),
+('Vitor Lopes', 'vitor.lopes90@example.com', '511.666.777-88', '(41) 91234-3456', 'nenhuma', 'Ensino Técnico em Enfermagem', '2 anos como técnico em enfermagem', 'Cuidado com Pacientes', 'curriculo_vitor_l.pdf', '1995-09-11'),
+
+('Amanda Rocha', 'amanda.rocha91@example.com', '522.777.888-99', '(51) 92345-4567', 'auditiva', 'Graduação em Letras', '7 anos como revisora', 'Ortografia, Gramática, Redação', 'curriculo_amanda.pdf', '1987-10-27'),
+('Bernardo Silva', 'bernardo.silva92@example.com', '533.888.999-11', '(61) 93456-5678', 'nenhuma', 'Graduação em Administração', '4 anos em recursos humanos', 'Gestão de Pessoas, Entrevistas', 'curriculo_bernardo.pdf', '1993-04-01'),
+('Camila Martins', 'camila.martins93@example.com', '544.999.111-22', '(71) 94567-6789', 'visual', 'Graduação em Biomedicina', '2 anos como biomédica', 'Análises Clínicas, Microbiologia', 'curriculo_camila.pdf', '1994-10-17'),
+('Diego Nascimento', 'diego.nascimento94@example.com', '555.111.222-33', '(81) 95678-7890', 'auditiva', 'Graduação em Economia', '3 anos como economista', 'Análise de Mercado, Relatórios Financeiros', 'curriculo_diego.pdf', '1986-05-30'),
+('Elaine Gonçalves', 'elaine.goncalves95@example.com', '566.222.333-44', '(91) 96789-8901', 'nenhuma', 'Ensino Técnico em Eletrônica', '6 anos em manutenção eletrônica', 'Eletrônica, Manutenção', 'curriculo_elaine.pdf', '1988-09-12'),
+('Felipe Soares', 'felipe.soares96@example.com', '577.333.444-55', '(11) 97890-9012', 'física', 'Graduação em Engenharia Civil', '7 anos como engenheiro de obras', 'AutoCAD, Planejamento', 'curriculo_felipe.pdf', '1991-08-03'),
+('Gabriela Alves', 'gabriela.alves97@example.com', '588.444.555-66', '(21) 98901-0123', 'visual', 'Ensino Médio Completo', '2 anos como recepcionista', 'Atendimento, Organização', 'curriculo_gabriela.pdf', '1990-01-05'),
+('Hugo Monteiro', 'hugo.monteiro98@example.com', '599.555.666-77', '(31) 99012-1234', 'auditiva', 'Graduação em Matemática', '4 anos como professor', 'Ensino, Matemática, Didática', 'curriculo_hugo.pdf', '1987-07-02'),
+('Isabela Lopes', 'isabela.lopes99@example.com', '600.666.777-88', '(41) 90123-2345', 'nenhuma', 'Ensino Técnico em Informática', '3 anos em suporte de TI', 'Suporte, Configuração', 'curriculo_isabela.pdf', '1993-03-10'),
+('Juliana Ferreira', 'juliana.ferreira100@example.com', '611.777.888-99', '(51) 91234-3456', 'visual', 'Graduação em Ciências Biológicas', '5 anos em laboratório', 'Biologia, Pesquisa, Análise', 'curriculo_juliana.pdf', '1992-05-11');
+
 alter table enderecos_usuarios auto_increment = 100;
 INSERT INTO endereco_usuario (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
 (1, 'Rua das Flores', '120', 'São Paulo', 'SP', '01001-000'),
@@ -204,6 +260,58 @@ INSERT INTO endereco_usuario (id_usuario, logradouro, numero, cidade, estado, ce
 (58, 'Avenida do Estado', '6400', 'São Paulo', 'SP', '01516-000'),
 (59, 'Rua dos Prazeres', '6600', 'Rio de Janeiro', 'RJ', '22210-000'),
 (60, 'Rua Nova Esperança', '6800', 'Niterói', 'RJ', '24220-000');
+
+INSERT INTO enderecos_usuarios (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
+(51, 'Rua das Palmeiras', '101', 'São Paulo', 'SP', '01010-000'),
+(52, 'Av. das Flores', '202', 'Rio de Janeiro', 'RJ', '20020-010'),
+(53, 'Rua dos Pioneiros', '303', 'Curitiba', 'PR', '80030-020'),
+(54, 'Av. das Nações', '404', 'Porto Alegre', 'RS', '90040-030'),
+(55, 'Rua do Sol', '505', 'Brasília', 'DF', '70050-040'),
+(56, 'Rua das Estrelas', '606', 'Florianópolis', 'SC', '88060-050'),
+(57, 'Av. Paulista', '707', 'São Paulo', 'SP', '01310-200'),
+(58, 'Rua dos Lírios', '808', 'Belo Horizonte', 'MG', '30120-060'),
+(59, 'Rua dos Girassóis', '909', 'Salvador', 'BA', '40020-100'),
+(60, 'Av. das Américas', '1010', 'Rio de Janeiro', 'RJ', '22631-100'),
+(61, 'Rua das Magnólias', '1111', 'Curitiba', 'PR', '81510-110'),
+(62, 'Rua dos Jacarandás', '1212', 'Manaus', 'AM', '69020-120'),
+(63, 'Av. Central', '1313', 'Fortaleza', 'CE', '60130-130'),
+(64, 'Rua das Oliveiras', '1414', 'Belém', 'PA', '66020-140'),
+(65, 'Av. do Estado', '1515', 'São Paulo', 'SP', '01510-150'),
+(66, 'Rua da Paz', '1616', 'Recife', 'PE', '50020-160'),
+(67, 'Rua do Porto', '1717', 'Santos', 'SP', '11020-170'),
+(68, 'Rua dos Pinheiros', '1818', 'Porto Alegre', 'RS', '90020-180'),
+(69, 'Av. dos Bandeirantes', '1919', 'Campinas', 'SP', '13030-190'),
+(70, 'Rua do Comércio', '2020', 'São Luís', 'MA', '65020-200'),
+(71, 'Rua dos Cajueiros', '2121', 'Maceió', 'AL', '57020-210'),
+(72, 'Av. Brasil', '2222', 'São Paulo', 'SP', '01030-220'),
+(73, 'Rua das Gaivotas', '2323', 'Florianópolis', 'SC', '88030-230'),
+(74, 'Av. dos Navegantes', '2424', 'Vitória', 'ES', '29020-240'),
+(75, 'Rua dos Jatobás', '2525', 'Goiânia', 'GO', '74020-250'),
+(76, 'Rua do Oceano', '2626', 'Niterói', 'RJ', '24020-260'),
+(77, 'Av. Perimetral', '2727', 'Belém', 'PA', '66030-270'),
+(78, 'Rua das Hortênsias', '2828', 'Campinas', 'SP', '13040-280'),
+(79, 'Av. Senador Vergueiro', '2929', 'São Bernardo do Campo', 'SP', '09720-290'),
+(80, 'Rua do Bosque', '3030', 'Barueri', 'SP', '06440-300'),
+(81, 'Rua das Flores', '3131', 'Jundiaí', 'SP', '13210-310'),
+(82, 'Av. Santo Antônio', '3232', 'Sorocaba', 'SP', '18020-320'),
+(83, 'Rua das Pitangueiras', '3333', 'Guarulhos', 'SP', '07120-330'),
+(84, 'Rua dos Flamboyants', '3434', 'Osasco', 'SP', '06220-340'),
+(85, 'Av. George Corbisier', '3535', 'São Paulo', 'SP', '04310-350'),
+(86, 'Rua do Horto', '3636', 'São Paulo', 'SP', '02310-360'),
+(87, 'Rua do Triunfo', '3737', 'Diadema', 'SP', '09920-370'),
+(88, 'Av. Dr. Ricardo Jafet', '3838', 'São Paulo', 'SP', '04110-380'),
+(89, 'Rua Alfredo Pujol', '3939', 'São Paulo', 'SP', '02010-390'),
+(90, 'Rua Nove de Julho', '4040', 'Franca', 'SP', '14400-400'),
+(91, 'Rua dos Poetas', '4141', 'Piracicaba', 'SP', '13400-410'),
+(92, 'Rua das Orquídeas', '4242', 'Taubaté', 'SP', '12000-420'),
+(93, 'Rua dos Jacarandás', '4343', 'Itapevi', 'SP', '06610-430'),
+(94, 'Av. Presidente Kennedy', '4444', 'Indaiatuba', 'SP', '13330-440'),
+(95, 'Rua da Luz', '4545', 'São José dos Campos', 'SP', '12200-450'),
+(96, 'Rua das Esmeraldas', '4646', 'Santo André', 'SP', '09120-460'),
+(97, 'Av. Prudente de Morais', '4747', 'Belo Horizonte', 'MG', '30320-470'),
+(98, 'Rua do Sol', '4848', 'Campo Grande', 'MS', '79020-480'),
+(99, 'Av. Mato Grosso', '4949', 'Cuiabá', 'MT', '78020-490'),
+(100, 'Rua das Palmeiras', '5050', 'Porto Velho', 'RO', '76820-500');
 
 INSERT INTO empresas (nome_empresa, cnpj, email_contato, telefone_contato, setor, politica_inclusao) VALUES
 ('Tech Solutions', '12.345.678/0001-90', 'contato@techsolutions.com', '(11) 3344-5566', 'Tecnologia', 'Inclusão de pessoas com deficiência em áreas técnicas e administrativas'),
@@ -318,6 +426,43 @@ INSERT INTO vagas (titulo, descricao, requisitos, salario, tipo_contratacao, loc
 ('Soldador', 'Soldagem e reparo de peças metálicas.', 'Experiência em soldagem e curso de soldador', 2500.00, 'CLT', 'Maceió', 15),
 ('Atendente de SAC', 'Atendimento ao cliente em central de atendimento.', 'Boa comunicação e ensino médio completo', 2100.00, 'CLT', 'Aracaju', 16);
 
+INSERT INTO vagas (titulo, descricao, requisitos, salario, tipo_contratacao, localizacao, id_empresa) VALUES
+('Especialista em Logística', 'Coordenar operações logísticas e de distribuição.', 'Experiência em logística, planejamento e controle', 5500.00, 'CLT', 'Curitiba', 1),
+('Analista de Marketing Digital', 'Planejar e executar campanhas digitais.', 'Experiência com SEO, Google Ads, redes sociais', 4800.00, 'CLT', 'São Paulo', 2),
+('Engenheiro de Segurança do Trabalho', 'Supervisão e controle de segurança em obras.', 'Formação em Engenharia e especialização em segurança', 6500.00, 'PJ', 'Recife', 3),
+('Farmacêutico', 'Atendimento e dispensação de medicamentos.', 'Graduação em Farmácia e CRF ativo', 4200.00, 'CLT', 'Porto Alegre', 4),
+('Especialista em Recursos Humanos', 'Recrutamento, seleção e desenvolvimento de pessoal.', 'Graduação em Psicologia ou RH', 7000.00, 'CLT', 'Brasília', 5),
+('Engenheiro de Software', 'Desenvolvimento de sistemas robustos e escaláveis.', 'Conhecimento em Java, SQL, arquitetura de software', 8500.00, 'CLT', 'Campinas', 6),
+('Técnico em Enfermagem', 'Apoio e assistência em procedimentos médicos.', 'Curso técnico e COREN ativo', 2800.00, 'CLT', 'São Paulo', 7),
+('Gerente de Vendas', 'Gerenciar equipe e estratégias de vendas.', 'Experiência em liderança e estratégias de vendas', 7500.00, 'CLT', 'Rio de Janeiro', 8),
+('Engenheiro Elétrico', 'Projetos e execução de sistemas elétricos.', 'Graduação em Engenharia Elétrica e CREA', 7000.00, 'CLT', 'Curitiba', 9),
+('Cozinheiro', 'Preparação de pratos e organização da cozinha.', 'Experiência como cozinheiro', 2500.00, 'CLT', 'Salvador', 10),
+('Estagiário em Direito', 'Auxiliar em atividades jurídicas e processos.', 'Cursando Direito, boa redação', 1500.00, 'Estágio', 'São Luís', 11),
+('Auxiliar Administrativo', 'Apoio em atividades de organização e atendimento.', 'Ensino médio completo, pacote Office', 1800.00, 'CLT', 'Belém', 12),
+('Desenvolvedor Backend', 'Desenvolvimento de APIs e integrações.', 'Experiência com Node.js, Python ou Java', 6000.00, 'PJ', 'Campinas', 13),
+('Especialista em E-commerce', 'Gerenciar plataformas e-commerce e campanhas.', 'Experiência em plataformas online e marketing digital', 5000.00, 'CLT', 'Natal', 14),
+('Motorista', 'Transporte de materiais e pessoas.', 'CNH categoria D e experiência na área', 2300.00, 'CLT', 'Fortaleza', 15),
+('Zelador', 'Limpeza e organização de áreas comuns.', 'Experiência como zelador', 1800.00, 'CLT', 'Porto Velho', 16),
+('Desenvolvedor Java', 'Desenvolvimento de sistemas e softwares em Java.', 'Conhecimento avançado em Java, Spring', 6500.00, 'PJ', 'São Paulo', 1),
+('Analista de Qualidade', 'Inspeção e controle de qualidade de produtos.', 'Experiência em controle de qualidade', 4000.00, 'CLT', 'Brasília', 17),
+('Coordenador de Projetos', 'Gestão de projetos e recursos.', 'Formação em Administração, gestão de equipes', 7000.00, 'CLT', 'São Paulo', 18),
+('Atendente de Loja', 'Atendimento ao cliente e operações de caixa.', 'Ensino médio completo', 1800.00, 'CLT', 'Curitiba', 19),
+('Agente de Atendimento', 'Atendimento ao cliente e suporte técnico.', 'Boa comunicação e ensino médio', 2200.00, 'CLT', 'São Paulo', 20),
+('Contador', 'Gestão de finanças e relatórios contábeis.', 'CRC ativo e experiência em contabilidade', 5500.00, 'CLT', 'Recife', 21),
+('Técnico em Informática', 'Suporte e manutenção de equipamentos.', 'Curso técnico em Informática', 2800.00, 'CLT', 'Fortaleza', 22),
+('Vendedor Externo', 'Prospecção e vendas externas.', 'Experiência em vendas externas', 3000.00, 'CLT', 'Campinas', 23),
+('Redator', 'Criação de conteúdos para blog e redes sociais.', 'Formação em Comunicação ou Marketing', 3200.00, 'CLT', 'São Paulo', 24),
+('Analista de Dados', 'Análise de dados e criação de relatórios.', 'Conhecimento em SQL e ferramentas de análise', 5000.00, 'PJ', 'Rio de Janeiro', 25),
+('Cientista de Dados', 'Desenvolvimento de modelos preditivos e análise.', 'Formação em Matemática, Estatística ou Ciência de Dados', 8500.00, 'CLT', 'Brasília', 26),
+('Técnico de Laboratório', 'Análises e controle de amostras em laboratório.', 'Curso técnico em Laboratório', 2500.00, 'CLT', 'Curitiba', 27),
+('Porteiro', 'Controle de acesso e segurança.', 'Ensino médio completo', 1800.00, 'CLT', 'Salvador', 28),
+('Gerente de Projetos', 'Coordenação de equipes e cronogramas.', 'Experiência em gerenciamento de projetos', 7500.00, 'CLT', 'São Paulo', 29),
+('Técnico de Segurança', 'Implementação de normas de segurança.', 'Curso técnico em segurança do trabalho', 3200.00, 'CLT', 'Fortaleza', 30),
+('Arquiteto de Soluções', 'Desenvolvimento de arquitetura para soluções de TI.', 'Experiência em arquitetura de sistemas', 9000.00, 'PJ', 'Campinas', 1),
+('Gerente de Produção', 'Coordenação de equipes de produção.', 'Experiência em gestão de produção', 6500.00, 'CLT', 'Manaus', 2),
+('Motorista Particular', 'Condução de pessoas para eventos e compromissos.', 'CNH categoria B e experiência', 2500.00, 'CLT', 'Recife', 3),
+('Auxiliar de Cozinha', 'Apoio em preparação e limpeza na cozinha.', 'Ensino fundamental completo', 1500.00, 'CLT', 'São Paulo', 4);
+
 INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
 (1, 1, '2024-05-15 09:30:00', 'Em análise'),
 (2, 2, '2024-05-18 10:00:00', 'Aprovado'),
@@ -410,6 +555,60 @@ INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
 (39, 29, '2024-12-01 16:20:00', 'Aprovado'),
 (40, 30, '2024-12-03 11:55:00', 'Em análise');
 
+INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
+(51, 1, '2024-06-05 10:00:00', 'Em análise'),
+(52, 3, '2024-06-10 11:30:00', 'Aprovado'),
+(53, 5, '2024-06-15 09:45:00', 'Rejeitado'),
+(54, 7, '2024-06-18 13:20:00', 'Em análise'),
+(55, 2, '2024-06-22 14:00:00', 'Aprovado'),
+(56, 4, '2024-06-25 10:30:00', 'Rejeitado'),
+(57, 8, '2024-06-27 15:45:00', 'Em análise'),
+(58, 6, '2024-07-01 09:20:00', 'Aprovado'),
+(59, 10, '2024-07-04 16:30:00', 'Em análise'),
+(60, 9, '2024-07-08 14:10:00', 'Rejeitado'),
+(61, 11, '2024-07-12 13:30:00', 'Em análise'),
+(62, 13, '2024-07-14 11:50:00', 'Aprovado'),
+(63, 15, '2024-07-17 15:10:00', 'Rejeitado'),
+(64, 17, '2024-07-20 12:00:00', 'Em análise'),
+(65, 12, '2024-07-23 10:15:00', 'Aprovado'),
+(66, 14, '2024-07-26 09:00:00', 'Em análise'),
+(67, 16, '2024-07-28 15:40:00', 'Rejeitado'),
+(68, 18, '2024-08-01 11:20:00', 'Em análise'),
+(69, 20, '2024-08-03 14:30:00', 'Aprovado'),
+(70, 19, '2024-08-06 10:50:00', 'Rejeitado'),
+(71, 22, '2024-08-10 09:45:00', 'Em análise'),
+(72, 23, '2024-08-12 15:25:00', 'Aprovado'),
+(73, 24, '2024-08-15 10:05:00', 'Rejeitado'),
+(74, 25, '2024-08-18 11:15:00', 'Em análise'),
+(75, 21, '2024-08-20 13:35:00', 'Aprovado');
+
+INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
+(51, 31, '2024-07-02 09:30:00', 'Em análise'),
+(52, 32, '2024-07-04 10:15:00', 'Aprovado'),
+(53, 33, '2024-07-06 11:45:00', 'Rejeitado'),
+(54, 34, '2024-07-08 14:20:00', 'Em análise'),
+(55, 35, '2024-07-10 13:00:00', 'Aprovado'),
+(56, 36, '2024-07-12 09:50:00', 'Rejeitado'),
+(57, 37, '2024-07-14 15:30:00', 'Em análise'),
+(58, 38, '2024-07-16 10:40:00', 'Aprovado'),
+(59, 39, '2024-07-18 12:25:00', 'Rejeitado'),
+(60, 40, '2024-07-20 11:10:00', 'Em análise'),
+(61, 41, '2024-07-22 14:00:00', 'Aprovado'),
+(62, 42, '2024-07-24 16:30:00', 'Rejeitado'),
+(63, 43, '2024-07-26 13:20:00', 'Em análise'),
+(64, 44, '2024-07-28 09:40:00', 'Aprovado'),
+(65, 45, '2024-07-30 11:30:00', 'Rejeitado'),
+(66, 46, '2024-08-01 10:00:00', 'Em análise'),
+(67, 47, '2024-08-03 15:00:00', 'Aprovado'),
+(68, 48, '2024-08-05 12:45:00', 'Rejeitado'),
+(69, 49, '2024-08-07 09:25:00', 'Em análise'),
+(70, 50, '2024-08-09 13:50:00', 'Aprovado'),
+(71, 31, '2024-08-11 14:10:00', 'Rejeitado'),
+(72, 32, '2024-08-13 16:15:00', 'Em análise'),
+(73, 33, '2024-08-15 10:50:00', 'Aprovado'),
+(74, 34, '2024-08-17 11:20:00', 'Rejeitado'),
+(75, 35, '2024-08-19 12:30:00', 'Em análise');
+
 INSERT INTO feedbacks (id_usuario, id_empresa, conteudo, data_feedback) VALUES
 (1, 1, 'Ótimo ambiente de trabalho e equipe colaborativa.', '2024-06-01 10:30:00'),
 (2, 2, 'Processo de recrutamento bem organizado e rápido.', '2024-06-03 14:45:00'),
@@ -442,208 +641,44 @@ INSERT INTO feedbacks (id_usuario, id_empresa, conteudo, data_feedback) VALUES
 (29, 29, 'Ambiente de trabalho desafiador e recompensador.', '2024-08-07 10:40:00'),
 (30, 30, 'Oportunidade de crescimento profissional.', '2024-08-10 09:55:00');
 
-alter table usuarios auto_increment = 50;
-
-INSERT INTO usuarios (nome, email, cpf, telefone, tipo_deficiencia, formacao, experiencia, habilidades, curriculo, datanascimento) VALUES
-('Alberto Machado', 'alberto.machado351@example.com', '132.333.444-55', '(11) 93212-3456', 'nenhuma', 'Graduação em História', '5 anos como professor', 'Didática, Pesquisa, Comunicação', 'curriculo_alberto.pdf', '1985-04-13'),
-('Bianca Ribeiro', 'bianca.riibeiro52@example.com', '133.434.555-66', '(21) 94321-4567', 'auditiva', 'Graduação em Artes', '3 anos como designer', 'Photoshop, Illustrator, Criatividade', 'curriculo_bianca.pdf', '1990-11-03'),
-('Caio Martins', 'caio.martins53@example.com', '144.555.666-77', '(31) 95432-5678', 'física', 'Graduação em Administração', '4 anos em gestão financeira', 'Organização, Planejamento, Finanças', 'curriculo_caio.pdf', '1992-06-24'),
-('Diana Souza', 'diana.souza54@example.com', '155.666.777-88', '(41) 96543-6789', 'visual', 'Graduação em Psicologia', '6 anos como psicóloga clínica', 'Psicoterapia, Escuta Ativa, Empatia', 'curriculo_diana.pdf', '1987-03-10'),
-('Eduardo Nunes', 'eduardo.nunes55@example.com', '166.777.888-99', '(51) 97654-7890', 'nenhuma', 'Ensino Técnico em Eletrônica', '3 anos em manutenção', 'Eletrônica, Análise de Circuitos, Solução de Problemas', 'curriculo_eduardo.pdf', '1994-09-02'),
-('Fernanda Silva', 'fernanda.silva56@example.com', '177.888.999-11', '(61) 98765-8901', 'auditiva', 'Graduação em Economia', '5 anos em análise de dados', 'Análise, Planejamento, Excel', 'curriculo_fernanda.pdf', '1991-08-14'),
-('Guilherme Santos', 'guilherme.santos57@example.com', '188.999.111-22', '(71) 99876-9012', 'nenhuma', 'Ensino Médio Completo', '2 anos em vendas', 'Comunicação, Negociação, Persuasão', 'curriculo_guilherme.pdf', '1988-12-08'),
-('Helena Souza', 'helena.souza58@example.com', '199.111.222-33', '(81) 90987-0123', 'visual', 'Graduação em Pedagogia', '6 anos como professora', 'Ensino Infantil, Didática, Planejamento', 'curriculo_helena.pdf', '1992-10-10'),
-('Igor Almeida', 'igor.almeida59@example.com', '200.222.333-44', '(91) 90123-2345', 'física', 'Ensino Técnico em Informática', '3 anos em suporte técnico', 'Configuração, Suporte ao Cliente', 'curriculo_igor.pdf', '1989-05-25'),
-('Jéssica Lima', 'jessica.lima60@example.com', '211.333.444-55', '(11) 90234-3456', 'auditiva', 'Graduação em Serviço Social', '4 anos em atendimento', 'Empatia, Comunicação, Organização', 'curriculo_jessica.pdf', '1993-02-14'),
-('Kaique Ribeiro', 'kaique.ribeiro61@example.com', '222.444.555-66', '(21) 91345-4567', 'nenhuma', 'Graduação em Engenharia', '2 anos em engenharia de projetos', 'AutoCAD, Cálculos, Planejamento', 'curriculo_kaique.pdf', '1995-09-09'),
-('Lara Batista', 'lara.batista62@example.com', '233.555.666-77', '(31) 92456-5678', 'visual', 'Graduação em Nutrição', '3 anos em consultoria alimentar', 'Nutrição, Educação Alimentar', 'curriculo_lara.pdf', '1994-07-20'),
-('Marcelo Andrade', 'marcelo.andrade63@example.com', '244.666.777-88', '(41) 93567-6789', 'física', 'Ensino Técnico em Mecânica', '5 anos como mecânico', 'Manutenção, Conserto de Equipamentos', 'curriculo_marcelo.pdf', '1986-03-01'),
-('Nayara Barros', 'nayara.barros64@example.com', '255.777.888-99', '(51) 94678-7890', 'nenhuma', 'Graduação em Psicologia', '6 anos como psicóloga organizacional', 'Escuta Ativa, Desenvolvimento Organizacional', 'curriculo_nayara.pdf', '1991-06-15'),
-('Otávio Ferreira', 'otavio.ferreira65@example.com', '266.888.999-11', '(61) 95789-8901', 'auditiva', 'Ensino Médio Completo', '2 anos como atendente', 'Atendimento, Organização, Empatia', 'curriculo_otavio.pdf', '1988-09-14'),
-('Paula Almeida', 'paula.almeida66@example.com', '277.999.111-22', '(71) 96890-9012', 'visual', 'Graduação em Administração', '5 anos em administração de empresas', 'Liderança, Planejamento', 'curriculo_paula.pdf', '1993-12-12'),
-('Renato Gonçalves', 'renato.goncalves67@example.com', '288.111.222-33', '(81) 97901-0123', 'nenhuma', 'Graduação em Física', '4 anos em pesquisa científica', 'Pesquisa, Análise de Dados', 'curriculo_renato.pdf', '1987-11-18'),
-('Sônia Silva', 'sonia.silva68@example.com', '299.222.333-44', '(91) 98012-1234', 'auditiva', 'Graduação em Letras', '7 anos como professora de literatura', 'Didática, Literatura, Comunicação', 'curriculo_sonia.pdf', '1990-05-22'),
-('Tiago Alves', 'tiago.alves69@example.com', '300.333.444-55', '(11) 98123-2345', 'física', 'Graduação em Engenharia Civil', '8 anos em projetos de obras', 'AutoCAD, Planejamento, Gerenciamento', 'curriculo_tiago.pdf', '1985-08-10'),
-('Viviane Moraes', 'viviane.moraes70@example.com', '311.444.555-66', '(21) 98234-3456', 'nenhuma', 'Ensino Técnico em Enfermagem', '5 anos como técnica de enfermagem', 'Cuidados com Pacientes, Auxílio Médico', 'curriculo_viviane.pdf', '1992-01-28'),
-
-('Alfredo Lira', 'alfredo.lira71@example.com', '322.555.666-77', '(31) 98345-4567', 'visual', 'Graduação em Direito', '3 anos como advogado', 'Redação Jurídica, Argumentação', 'curriculo_alfredo.pdf', '1987-04-30'),
-('Beatriz Nogueira', 'beatriz.nogueira72@example.com', '333.666.777-88', '(41) 98456-5678', 'auditiva', 'Graduação em Fisioterapia', '6 anos como fisioterapeuta', 'Reabilitação, Cuidado ao Paciente', 'curriculo_beatriz.pdf', '1990-02-02'),
-('Carlos Silva', 'carlos.silva73@example.com', '344.777.888-99', '(51) 98567-6789', 'nenhuma', 'Graduação em Ciências Contábeis', '4 anos como contador', 'Contabilidade, Planejamento', 'curriculo_carlos.pdf', '1988-08-25'),
-('Daniela Souza', 'daniela.souza74@example.com', '355.888.999-11', '(61) 98678-7890', 'visual', 'Ensino Técnico em Logística', '3 anos em logística', 'Organização, Planejamento, Gerenciamento', 'curriculo_daniela.pdf', '1993-03-12'),
-('Eduardo Vieira', 'eduardo.vieira75@example.com', '366.999.111-22', '(71) 98789-8901', 'auditiva', 'Graduação em Ciências da Computação', '6 anos como desenvolvedor', 'Python, Java, SQL', 'curriculo_eduardo_v.pdf', '1991-11-04'),
-('Fabiana Santos', 'fabiana.santos76@example.com', '377.111.222-33', '(81) 98890-9012', 'física', 'Graduação em Ciências Biológicas', '3 anos em pesquisa biológica', 'Pesquisa, Análise de Amostras', 'curriculo_fabiana.pdf', '1986-07-07'),
-('Gabriel Souza', 'gabriel.souza77@example.com', '388.222.333-44', '(91) 98901-0123', 'nenhuma', 'Ensino Médio Completo', '4 anos em atendimento ao cliente', 'Atendimento, Organização', 'curriculo_gabriel.pdf', '1994-02-15'),
-('Heloísa Martins', 'heloisa.martins78@example.com', '399.333.444-55', '(11) 99012-1234', 'visual', 'Graduação em Química', '5 anos em laboratório', 'Análises Químicas, Solução de Problemas', 'curriculo_heloisa.pdf', '1992-05-30'),
-('Ivo Rocha', 'ivo.rocha79@example.com', '400.444.555-66', '(21) 99123-2345', 'física', 'Ensino Técnico em Mecânica', '4 anos como mecânico', 'Manutenção, Ajuste de Equipamentos', 'curriculo_ivo.pdf', '1989-04-18'),
-('Joana Lopes', 'joana.lopes80@example.com', '411.555.666-77', '(31) 99234-3456', 'nenhuma', 'Graduação em Artes Visuais', '3 anos como ilustradora', 'Ilustração, Desenho', 'curriculo_joana.pdf', '1995-07-14'),
-
-('Kevin Rocha', 'kevin.rocha81@example.com', '422.666.777-88', '(41) 99345-4567', 'visual', 'Ensino Técnico em Eletrônica', '5 anos em suporte técnico', 'Configuração de Sistemas, Manutenção', 'curriculo_kevin.pdf', '1990-03-21'),
-('Livia Castro', 'livia.castro82@example.com', '433.777.888-99', '(51) 99456-5678', 'nenhuma', 'Graduação em Farmácia', '4 anos em farmácia clínica', 'Prescrição, Atendimento ao Cliente', 'curriculo_livia.pdf', '1987-06-06'),
-('Marcos Almeida', 'marcos.almeida83@example.com', '444.888.999-11', '(61) 99567-6789', 'auditiva', 'Graduação em Engenharia de Produção', '6 anos como engenheiro de produção', 'AutoCAD, Planejamento', 'curriculo_marcos.pdf', '1992-02-21'),
-('Natalia Silva', 'natalia.silva84@example.com', '455.999.111-22', '(71) 99678-7890', 'física', 'Graduação em Ciências Sociais', '2 anos como assistente de pesquisa', 'Análise de Dados, Trabalho em Equipe', 'curriculo_natalia.pdf', '1994-08-08'),
-('Otávia Mendes', 'otavia.mendes85@example.com', '466.111.222-33', '(81) 99789-8901', 'nenhuma', 'Ensino Técnico em Administração', '3 anos como auxiliar administrativo', 'Organização, Planejamento', 'curriculo_otavia.pdf', '1990-12-01'),
-('Paulo Martins', 'paulo.martins86@example.com', '477.222.333-44', '(91) 99890-9012', 'visual', 'Graduação em Ciências Contábeis', '4 anos como assistente contábil', 'Contabilidade, Relatórios', 'curriculo_paulo.pdf', '1986-09-25'),
-('Renata Barros', 'renata.barros87@example.com', '488.333.444-55', '(11) 99901-0123', 'auditiva', 'Ensino Técnico em Recursos Humanos', '4 anos em recrutamento', 'Entrevistas, Seleção de Candidatos', 'curriculo_renata.pdf', '1985-11-20'),
-('Simone Vieira', 'simone.vieira88@example.com', '499.444.555-66', '(21) 99012-1234', 'nenhuma', 'Graduação em Moda', '6 anos como estilista', 'Criação, Design', 'curriculo_simone.pdf', '1992-02-05'),
-('Tatiane Souza', 'tatiane.souza89@example.com', '500.555.666-77', '(31) 90123-2345', 'física', 'Graduação em Nutrição', '5 anos como nutricionista', 'Dieta, Educação Nutricional', 'curriculo_tatiane.pdf', '1991-03-18'),
-('Vitor Lopes', 'vitor.lopes90@example.com', '511.666.777-88', '(41) 91234-3456', 'nenhuma', 'Ensino Técnico em Enfermagem', '2 anos como técnico em enfermagem', 'Cuidado com Pacientes', 'curriculo_vitor_l.pdf', '1995-09-11'),
-
-('Amanda Rocha', 'amanda.rocha91@example.com', '522.777.888-99', '(51) 92345-4567', 'auditiva', 'Graduação em Letras', '7 anos como revisora', 'Ortografia, Gramática, Redação', 'curriculo_amanda.pdf', '1987-10-27'),
-('Bernardo Silva', 'bernardo.silva92@example.com', '533.888.999-11', '(61) 93456-5678', 'nenhuma', 'Graduação em Administração', '4 anos em recursos humanos', 'Gestão de Pessoas, Entrevistas', 'curriculo_bernardo.pdf', '1993-04-01'),
-('Camila Martins', 'camila.martins93@example.com', '544.999.111-22', '(71) 94567-6789', 'visual', 'Graduação em Biomedicina', '2 anos como biomédica', 'Análises Clínicas, Microbiologia', 'curriculo_camila.pdf', '1994-10-17'),
-('Diego Nascimento', 'diego.nascimento94@example.com', '555.111.222-33', '(81) 95678-7890', 'auditiva', 'Graduação em Economia', '3 anos como economista', 'Análise de Mercado, Relatórios Financeiros', 'curriculo_diego.pdf', '1986-05-30'),
-('Elaine Gonçalves', 'elaine.goncalves95@example.com', '566.222.333-44', '(91) 96789-8901', 'nenhuma', 'Ensino Técnico em Eletrônica', '6 anos em manutenção eletrônica', 'Eletrônica, Manutenção', 'curriculo_elaine.pdf', '1988-09-12'),
-('Felipe Soares', 'felipe.soares96@example.com', '577.333.444-55', '(11) 97890-9012', 'física', 'Graduação em Engenharia Civil', '7 anos como engenheiro de obras', 'AutoCAD, Planejamento', 'curriculo_felipe.pdf', '1991-08-03'),
-('Gabriela Alves', 'gabriela.alves97@example.com', '588.444.555-66', '(21) 98901-0123', 'visual', 'Ensino Médio Completo', '2 anos como recepcionista', 'Atendimento, Organização', 'curriculo_gabriela.pdf', '1990-01-05'),
-('Hugo Monteiro', 'hugo.monteiro98@example.com', '599.555.666-77', '(31) 99012-1234', 'auditiva', 'Graduação em Matemática', '4 anos como professor', 'Ensino, Matemática, Didática', 'curriculo_hugo.pdf', '1987-07-02'),
-('Isabela Lopes', 'isabela.lopes99@example.com', '600.666.777-88', '(41) 90123-2345', 'nenhuma', 'Ensino Técnico em Informática', '3 anos em suporte de TI', 'Suporte, Configuração', 'curriculo_isabela.pdf', '1993-03-10'),
-('Juliana Ferreira', 'juliana.ferreira100@example.com', '611.777.888-99', '(51) 91234-3456', 'visual', 'Graduação em Ciências Biológicas', '5 anos em laboratório', 'Biologia, Pesquisa, Análise', 'curriculo_juliana.pdf', '1992-05-11');
-
-
-alter table enderecos_usuarios auto_increment = 50;
-
-INSERT INTO enderecos_usuarios (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
-(51, 'Rua das Palmeiras', '101', 'São Paulo', 'SP', '01010-000'),
-(52, 'Av. das Flores', '202', 'Rio de Janeiro', 'RJ', '20020-010'),
-(53, 'Rua dos Pioneiros', '303', 'Curitiba', 'PR', '80030-020'),
-(54, 'Av. das Nações', '404', 'Porto Alegre', 'RS', '90040-030'),
-(55, 'Rua do Sol', '505', 'Brasília', 'DF', '70050-040'),
-(56, 'Rua das Estrelas', '606', 'Florianópolis', 'SC', '88060-050'),
-(57, 'Av. Paulista', '707', 'São Paulo', 'SP', '01310-200'),
-(58, 'Rua dos Lírios', '808', 'Belo Horizonte', 'MG', '30120-060'),
-(59, 'Rua dos Girassóis', '909', 'Salvador', 'BA', '40020-100'),
-(60, 'Av. das Américas', '1010', 'Rio de Janeiro', 'RJ', '22631-100'),
-(61, 'Rua das Magnólias', '1111', 'Curitiba', 'PR', '81510-110'),
-(62, 'Rua dos Jacarandás', '1212', 'Manaus', 'AM', '69020-120'),
-(63, 'Av. Central', '1313', 'Fortaleza', 'CE', '60130-130'),
-(64, 'Rua das Oliveiras', '1414', 'Belém', 'PA', '66020-140'),
-(65, 'Av. do Estado', '1515', 'São Paulo', 'SP', '01510-150'),
-(66, 'Rua da Paz', '1616', 'Recife', 'PE', '50020-160'),
-(67, 'Rua do Porto', '1717', 'Santos', 'SP', '11020-170'),
-(68, 'Rua dos Pinheiros', '1818', 'Porto Alegre', 'RS', '90020-180'),
-(69, 'Av. dos Bandeirantes', '1919', 'Campinas', 'SP', '13030-190'),
-(70, 'Rua do Comércio', '2020', 'São Luís', 'MA', '65020-200'),
-(71, 'Rua dos Cajueiros', '2121', 'Maceió', 'AL', '57020-210'),
-(72, 'Av. Brasil', '2222', 'São Paulo', 'SP', '01030-220'),
-(73, 'Rua das Gaivotas', '2323', 'Florianópolis', 'SC', '88030-230'),
-(74, 'Av. dos Navegantes', '2424', 'Vitória', 'ES', '29020-240'),
-(75, 'Rua dos Jatobás', '2525', 'Goiânia', 'GO', '74020-250'),
-(76, 'Rua do Oceano', '2626', 'Niterói', 'RJ', '24020-260'),
-(77, 'Av. Perimetral', '2727', 'Belém', 'PA', '66030-270'),
-(78, 'Rua das Hortênsias', '2828', 'Campinas', 'SP', '13040-280'),
-(79, 'Av. Senador Vergueiro', '2929', 'São Bernardo do Campo', 'SP', '09720-290'),
-(80, 'Rua do Bosque', '3030', 'Barueri', 'SP', '06440-300'),
-(81, 'Rua das Flores', '3131', 'Jundiaí', 'SP', '13210-310'),
-(82, 'Av. Santo Antônio', '3232', 'Sorocaba', 'SP', '18020-320'),
-(83, 'Rua das Pitangueiras', '3333', 'Guarulhos', 'SP', '07120-330'),
-(84, 'Rua dos Flamboyants', '3434', 'Osasco', 'SP', '06220-340'),
-(85, 'Av. George Corbisier', '3535', 'São Paulo', 'SP', '04310-350'),
-(86, 'Rua do Horto', '3636', 'São Paulo', 'SP', '02310-360'),
-(87, 'Rua do Triunfo', '3737', 'Diadema', 'SP', '09920-370'),
-(88, 'Av. Dr. Ricardo Jafet', '3838', 'São Paulo', 'SP', '04110-380'),
-(89, 'Rua Alfredo Pujol', '3939', 'São Paulo', 'SP', '02010-390'),
-(90, 'Rua Nove de Julho', '4040', 'Franca', 'SP', '14400-400'),
-(91, 'Rua dos Poetas', '4141', 'Piracicaba', 'SP', '13400-410'),
-(92, 'Rua das Orquídeas', '4242', 'Taubaté', 'SP', '12000-420'),
-(93, 'Rua dos Jacarandás', '4343', 'Itapevi', 'SP', '06610-430'),
-(94, 'Av. Presidente Kennedy', '4444', 'Indaiatuba', 'SP', '13330-440'),
-(95, 'Rua da Luz', '4545', 'São José dos Campos', 'SP', '12200-450'),
-(96, 'Rua das Esmeraldas', '4646', 'Santo André', 'SP', '09120-460'),
-(97, 'Av. Prudente de Morais', '4747', 'Belo Horizonte', 'MG', '30320-470'),
-(98, 'Rua do Sol', '4848', 'Campo Grande', 'MS', '79020-480'),
-(99, 'Av. Mato Grosso', '4949', 'Cuiabá', 'MT', '78020-490'),
-(100, 'Rua das Palmeiras', '5050', 'Porto Velho', 'RO', '76820-500');
-
-INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
-(51, 1, '2024-06-05 10:00:00', 'Em análise'),
-(52, 3, '2024-06-10 11:30:00', 'Aprovado'),
-(53, 5, '2024-06-15 09:45:00', 'Rejeitado'),
-(54, 7, '2024-06-18 13:20:00', 'Em análise'),
-(55, 2, '2024-06-22 14:00:00', 'Aprovado'),
-(56, 4, '2024-06-25 10:30:00', 'Rejeitado'),
-(57, 8, '2024-06-27 15:45:00', 'Em análise'),
-(58, 6, '2024-07-01 09:20:00', 'Aprovado'),
-(59, 10, '2024-07-04 16:30:00', 'Em análise'),
-(60, 9, '2024-07-08 14:10:00', 'Rejeitado'),
-(61, 11, '2024-07-12 13:30:00', 'Em análise'),
-(62, 13, '2024-07-14 11:50:00', 'Aprovado'),
-(63, 15, '2024-07-17 15:10:00', 'Rejeitado'),
-(64, 17, '2024-07-20 12:00:00', 'Em análise'),
-(65, 12, '2024-07-23 10:15:00', 'Aprovado'),
-(66, 14, '2024-07-26 09:00:00', 'Em análise'),
-(67, 16, '2024-07-28 15:40:00', 'Rejeitado'),
-(68, 18, '2024-08-01 11:20:00', 'Em análise'),
-(69, 20, '2024-08-03 14:30:00', 'Aprovado'),
-(70, 19, '2024-08-06 10:50:00', 'Rejeitado'),
-(71, 22, '2024-08-10 09:45:00', 'Em análise'),
-(72, 23, '2024-08-12 15:25:00', 'Aprovado'),
-(73, 24, '2024-08-15 10:05:00', 'Rejeitado'),
-(74, 25, '2024-08-18 11:15:00', 'Em análise'),
-(75, 21, '2024-08-20 13:35:00', 'Aprovado');
-
-
-INSERT INTO vagas (titulo, descricao, requisitos, salario, tipo_contratacao, localizacao, id_empresa) VALUES
-('Especialista em Logística', 'Coordenar operações logísticas e de distribuição.', 'Experiência em logística, planejamento e controle', 5500.00, 'CLT', 'Curitiba', 1),
-('Analista de Marketing Digital', 'Planejar e executar campanhas digitais.', 'Experiência com SEO, Google Ads, redes sociais', 4800.00, 'CLT', 'São Paulo', 2),
-('Engenheiro de Segurança do Trabalho', 'Supervisão e controle de segurança em obras.', 'Formação em Engenharia e especialização em segurança', 6500.00, 'PJ', 'Recife', 3),
-('Farmacêutico', 'Atendimento e dispensação de medicamentos.', 'Graduação em Farmácia e CRF ativo', 4200.00, 'CLT', 'Porto Alegre', 4),
-('Especialista em Recursos Humanos', 'Recrutamento, seleção e desenvolvimento de pessoal.', 'Graduação em Psicologia ou RH', 7000.00, 'CLT', 'Brasília', 5),
-('Engenheiro de Software', 'Desenvolvimento de sistemas robustos e escaláveis.', 'Conhecimento em Java, SQL, arquitetura de software', 8500.00, 'CLT', 'Campinas', 6),
-('Técnico em Enfermagem', 'Apoio e assistência em procedimentos médicos.', 'Curso técnico e COREN ativo', 2800.00, 'CLT', 'São Paulo', 7),
-('Gerente de Vendas', 'Gerenciar equipe e estratégias de vendas.', 'Experiência em liderança e estratégias de vendas', 7500.00, 'CLT', 'Rio de Janeiro', 8),
-('Engenheiro Elétrico', 'Projetos e execução de sistemas elétricos.', 'Graduação em Engenharia Elétrica e CREA', 7000.00, 'CLT', 'Curitiba', 9),
-('Cozinheiro', 'Preparação de pratos e organização da cozinha.', 'Experiência como cozinheiro', 2500.00, 'CLT', 'Salvador', 10),
-('Estagiário em Direito', 'Auxiliar em atividades jurídicas e processos.', 'Cursando Direito, boa redação', 1500.00, 'Estágio', 'São Luís', 11),
-('Auxiliar Administrativo', 'Apoio em atividades de organização e atendimento.', 'Ensino médio completo, pacote Office', 1800.00, 'CLT', 'Belém', 12),
-('Desenvolvedor Backend', 'Desenvolvimento de APIs e integrações.', 'Experiência com Node.js, Python ou Java', 6000.00, 'PJ', 'Campinas', 13),
-('Especialista em E-commerce', 'Gerenciar plataformas e-commerce e campanhas.', 'Experiência em plataformas online e marketing digital', 5000.00, 'CLT', 'Natal', 14),
-('Motorista', 'Transporte de materiais e pessoas.', 'CNH categoria D e experiência na área', 2300.00, 'CLT', 'Fortaleza', 15),
-('Zelador', 'Limpeza e organização de áreas comuns.', 'Experiência como zelador', 1800.00, 'CLT', 'Porto Velho', 16),
-('Desenvolvedor Java', 'Desenvolvimento de sistemas e softwares em Java.', 'Conhecimento avançado em Java, Spring', 6500.00, 'PJ', 'São Paulo', 1),
-('Analista de Qualidade', 'Inspeção e controle de qualidade de produtos.', 'Experiência em controle de qualidade', 4000.00, 'CLT', 'Brasília', 17),
-('Coordenador de Projetos', 'Gestão de projetos e recursos.', 'Formação em Administração, gestão de equipes', 7000.00, 'CLT', 'São Paulo', 18),
-('Atendente de Loja', 'Atendimento ao cliente e operações de caixa.', 'Ensino médio completo', 1800.00, 'CLT', 'Curitiba', 19),
-('Agente de Atendimento', 'Atendimento ao cliente e suporte técnico.', 'Boa comunicação e ensino médio', 2200.00, 'CLT', 'São Paulo', 20),
-('Contador', 'Gestão de finanças e relatórios contábeis.', 'CRC ativo e experiência em contabilidade', 5500.00, 'CLT', 'Recife', 21),
-('Técnico em Informática', 'Suporte e manutenção de equipamentos.', 'Curso técnico em Informática', 2800.00, 'CLT', 'Fortaleza', 22),
-('Vendedor Externo', 'Prospecção e vendas externas.', 'Experiência em vendas externas', 3000.00, 'CLT', 'Campinas', 23),
-('Redator', 'Criação de conteúdos para blog e redes sociais.', 'Formação em Comunicação ou Marketing', 3200.00, 'CLT', 'São Paulo', 24),
-('Analista de Dados', 'Análise de dados e criação de relatórios.', 'Conhecimento em SQL e ferramentas de análise', 5000.00, 'PJ', 'Rio de Janeiro', 25),
-('Cientista de Dados', 'Desenvolvimento de modelos preditivos e análise.', 'Formação em Matemática, Estatística ou Ciência de Dados', 8500.00, 'CLT', 'Brasília', 26),
-('Técnico de Laboratório', 'Análises e controle de amostras em laboratório.', 'Curso técnico em Laboratório', 2500.00, 'CLT', 'Curitiba', 27),
-('Porteiro', 'Controle de acesso e segurança.', 'Ensino médio completo', 1800.00, 'CLT', 'Salvador', 28),
-('Gerente de Projetos', 'Coordenação de equipes e cronogramas.', 'Experiência em gerenciamento de projetos', 7500.00, 'CLT', 'São Paulo', 29),
-('Técnico de Segurança', 'Implementação de normas de segurança.', 'Curso técnico em segurança do trabalho', 3200.00, 'CLT', 'Fortaleza', 30),
-('Arquiteto de Soluções', 'Desenvolvimento de arquitetura para soluções de TI.', 'Experiência em arquitetura de sistemas', 9000.00, 'PJ', 'Campinas', 1),
-('Gerente de Produção', 'Coordenação de equipes de produção.', 'Experiência em gestão de produção', 6500.00, 'CLT', 'Manaus', 2),
-('Motorista Particular', 'Condução de pessoas para eventos e compromissos.', 'CNH categoria B e experiência', 2500.00, 'CLT', 'Recife', 3),
-('Auxiliar de Cozinha', 'Apoio em preparação e limpeza na cozinha.', 'Ensino fundamental completo', 1500.00, 'CLT', 'São Paulo', 4);
-
-INSERT INTO candidaturas (id_usuario, id_vaga, data_aplicacao, status) VALUES
-(51, 31, '2024-07-02 09:30:00', 'Em análise'),
-(52, 32, '2024-07-04 10:15:00', 'Aprovado'),
-(53, 33, '2024-07-06 11:45:00', 'Rejeitado'),
-(54, 34, '2024-07-08 14:20:00', 'Em análise'),
-(55, 35, '2024-07-10 13:00:00', 'Aprovado'),
-(56, 36, '2024-07-12 09:50:00', 'Rejeitado'),
-(57, 37, '2024-07-14 15:30:00', 'Em análise'),
-(58, 38, '2024-07-16 10:40:00', 'Aprovado'),
-(59, 39, '2024-07-18 12:25:00', 'Rejeitado'),
-(60, 40, '2024-07-20 11:10:00', 'Em análise'),
-(61, 41, '2024-07-22 14:00:00', 'Aprovado'),
-(62, 42, '2024-07-24 16:30:00', 'Rejeitado'),
-(63, 43, '2024-07-26 13:20:00', 'Em análise'),
-(64, 44, '2024-07-28 09:40:00', 'Aprovado'),
-(65, 45, '2024-07-30 11:30:00', 'Rejeitado'),
-(66, 46, '2024-08-01 10:00:00', 'Em análise'),
-(67, 47, '2024-08-03 15:00:00', 'Aprovado'),
-(68, 48, '2024-08-05 12:45:00', 'Rejeitado'),
-(69, 49, '2024-08-07 09:25:00', 'Em análise'),
-(70, 50, '2024-08-09 13:50:00', 'Aprovado'),
-(71, 31, '2024-08-11 14:10:00', 'Rejeitado'),
-(72, 32, '2024-08-13 16:15:00', 'Em análise'),
-(73, 33, '2024-08-15 10:50:00', 'Aprovado'),
-(74, 34, '2024-08-17 11:20:00', 'Rejeitado'),
-(75, 35, '2024-08-19 12:30:00', 'Em análise');
 SET FOREIGN_KEY_CHECKS = 1;
 
+# CRIAR MODELO LÓGICO
+# CRIAR SELECTS
+# CRIAR JOINS
+# CRIAR GROUP BY
+# CRIAR 10 VIEWS
+# CRIAR 5+ STORED PROCEDURES 
+# CRIAR 5+ FUNCTIONS 
+# CRIAR 5+ TRIGGERS
+
+
+
+SELECT * 
+FROM usuarios 
+WHERE experiencia LIKE CONCAT ('%', 5 , '%');
+
+SELECT *
+FROM candidaturas 
+WHERE data_aplicacao BETWEEN '2024-01-01' AND '2024-10-01';
+
+SELECT *
+FROM empresas
+WHERE setor = 'tecnologia' OR setor = 'saude';
+
+SELECT * 
+FROM usuarios
+WHERE tipo_deficiencia = 'nenhuma';
+
+
+SELECT * 
+FROM usuarios 
+WHERE tipo_deficiencia = 'Visual';
+
+SELECT * 
+FROM vagas 
+WHERE salario > 5000 AND NOT localizacao = 'Sao Paulo';
+
+SELECT * 
+FROM enderecos_empresas 
+WHERE estado IN ('BA', 'PE', 'CE');
