@@ -166,7 +166,7 @@ INSERT INTO endereco_usuario (id_usuario, logradouro, numero, cidade, estado, ce
 (37, 'Rua AK', '3700', 'Goiânia', 'GO', '74000-000'),
 (38, 'Avenida AL', '3800', 'Maceió', 'AL', '57000-000');
 
-alter table empresas auto_increment = 0;
+alter table empresas auto_increment = 24;
 INSERT INTO empresas (nome_empresa, cnpj, email_contato, telefone_contato, setor, endereco, politica_inclusao) VALUES
 ("InovaTech", "12.345.678/0001-90", "contato@inovatech.com.br", "11 91234-5678", "Tecnologia", "Av. das Nações, 100", "Comprometida com a inclusão de PCDs em tecnologia."),
 ("EcoAmbiente", "23.456.789/0001-01", "contato@ecoambiente.com.br", "11 93456-7890", "Meio Ambiente", "Rua Verde, 200", "Valorização da diversidade e sustentabilidade."),
@@ -247,52 +247,65 @@ INSERT INTO vagas (titulo, descricao, requisitos, salario, tipo_contratacao, loc
 ("Estagiário em Design Gráfico", "Auxiliar na criação de peças gráficas e campanhas.", "Cursando Design Gráfico.", 1000.00, "Estágio", "Palmas, TO", 24),
 ("Gerente de Compras", "Gerenciar o setor de compras da empresa.", "Experiência em compras e negociações.", 12000.00, "CLT","Rio de Janeiro, RJ", 1);
 
- 
+ alter table candidaturas auto_increment = 0;
  SET FOREIGN_KEY_CHECKS = 0;
-INSERT INTO candidaturas (id_usuario, id_vaga) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10),
-(11, 1),
-(12, 2),
-(13, 3),
-(14, 4),
-(15, 5),
-(16, 6),
-(17, 7),
-(18, 8),
-(19, 9),
-(20, 10),
-(21, 1),
-(22, 2),
-(23, 3),
-(24, 4),
-(25, 5),
-(26, 6),
-(27, 7),
-(28, 8),
-(29, 9),
-(30, 10),
-(31, 1),
-(32, 2),
-(33, 3),
-(34, 4),
-(35, 5),
-(36, 6),
-(37, 7),
-(38, 8),
-(39, 9),
-(40, 1);
+
+INSERT INTO candidaturas (id_usuario, id_vaga, status) VALUES
+(1, 1, 'Em análise'),
+(2, 2, 'Aprovado'),
+(3, 3, 'Rejeitado'),
+(4, 4, 'Em análise'),
+(5, 5, 'Aprovado'),
+(6, 6, 'Rejeitado'),
+(7, 7, 'Em análise'),
+(8, 8, 'Aprovado'),
+(9, 9, 'Rejeitado'),
+(10, 10, 'Em análise'),
+(11, 1, 'Aprovado'),
+(12, 2, 'Rejeitado'),
+(13, 3, 'Em análise'),
+(14, 4, 'Aprovado'),
+(15, 5, 'Rejeitado'),
+(16, 6, 'Em análise'),
+(17, 7, 'Aprovado'),
+(18, 8, 'Rejeitado'),
+(19, 9, 'Em análise'),
+(20, 10, 'Aprovado'),
+(21, 1, 'Rejeitado'),
+(22, 2, 'Em análise'),
+(23, 3, 'Aprovado'),
+(24, 4, 'Rejeitado'),
+(25, 5, 'Em análise'),
+(26, 6, 'Aprovado'),
+(27, 7, 'Rejeitado'),
+(28, 8, 'Em análise'),
+(29, 9, 'Aprovado'),
+(30, 10, 'Rejeitado'),
+(31, 1, 'Em análise'),
+(32, 2, 'Aprovado'),
+(33, 3, 'Rejeitado'),
+(34, 4, 'Em análise'),
+(35, 5, 'Aprovado'),
+(36, 6, 'Rejeitado'),
+(37, 7, 'Em análise'),
+(38, 8, 'Aprovado'),
+(39, 9, 'Rejeitado'),
+(40, 10, 'Em análise'),
+(41, 1, 'Aprovado'),
+(42, 2, 'Rejeitado'),
+(43, 3, 'Em análise'),
+(44, 4, 'Aprovado'),
+(45, 5, 'Rejeitado'),
+(46, 6, 'Em análise'),
+(47, 7, 'Aprovado'),
+(48, 8, 'Rejeitado'),
+(49, 9, 'Em análise'),
+(50, 10, 'Aprovado');
+
 SET FOREIGN_KEY_CHECKS = 1;
 
 SET FOREIGN_KEY_CHECKS = 0;
+alter table feedbacks auto_increment = 1;
 INSERT INTO feedbacks (id_usuario, id_empresa, conteudo) VALUES
 (1, 1, 'Ótima empresa, com um ambiente muito acolhedor.'),
 (2, 1, 'Atendimento excelente e suporte eficiente.'),
@@ -345,10 +358,128 @@ INSERT INTO feedbacks (id_usuario, id_empresa, conteudo) VALUES
 (49, 4, 'Estou satisfeito com as oportunidades de aprendizado.'),
 (50, 5, 'Um ótimo lugar para se trabalhar!');
 
+SET FOREIGN_KEY_CHECKS = 0;
+alter table empresas auto_increment = 24;
+INSERT INTO empresas (nome_empresa, cnpj, email_contato, telefone_contato, setor, politica_inclusao) VALUES
+('Tech Innovators', '12.375.678/0001-90', 'rh@techinnovators.com', '1134567890', 'Tecnologia', 'Comprometida com a inclusão de PCDs em sua equipe, oferecendo oportunidades de treinamento e desenvolvimento.'),
+('Eco Solutions', '23.476.789/0001-91', 'rh@ecosolutions.com', '1145678901', 'Sustentabilidade', 'Possui um programa de inclusão que visa adaptar o ambiente de trabalho para PCDs.'),
+('Health Plus', '34.767.890/0001-92', 'rh@healthplus.com', '1156789012', 'Saúde', 'Promove a diversidade e inclusão em todas as suas ações e contratações.'),
+('Smart Logistics', '47.678.901/0001-93', 'rh@smartlogistics.com', '1167890123', 'Logística', 'Desenvolve políticas de inclusão com foco na adaptação de funções para PCDs.'),
+('EducaTech', '56.789.712/0001-94', 'rh@educatech.com', '1178901234', 'Educação', 'Realiza programas de inclusão de pessoas com deficiência em seus cursos e treinamentos.'),
+('Green Energy', '67.790.123/0001-95', 'rh@greenenergy.com', '1189012345', 'Energia', 'Incentiva a inclusão de PCDs e adaptações necessárias no local de trabalho.'),
+('Fashion Hub', '78.971.234/0001-96', 'rh@fashionhub.com', '1190123456', 'Moda', 'Oferece oportunidades iguais de emprego para todos, incluindo PCDs.'),
+('Foodies', '89.012.345/0701-97', 'rh@foodies.com', '1201234567', 'Alimentação', 'Possui um ambiente inclusivo e acessível a todos os colaboradores.'),
+('Secure Finance', '90.723.456/0001-98', 'rh@securefinance.com', '1212345678', 'Finanças', 'Desenvolve estratégias de inclusão no ambiente financeiro.'),
+('Travel Wise', '01.234.577/0001-99', 'rh@travelwise.com', '1223456789', 'Turismo', 'Oferece treinamentos para inclusão de PCDs em suas operações.'),
+('Home Comfort', '11.234.567/0001-00', 'rh@homecomfort.com', '1234567890', 'Decoração', 'Adapta seus processos para garantir a inclusão de PCDs.'),
+('Creative Minds', '22.745.678/0001-01', 'rh@creativeminds.com', '1245678901', 'Criatividade', 'Valoriza a diversidade e a inclusão em suas campanhas.'),
+('Gourmet Delights', '73.456.789/0001-02', 'rh@gourmetdelights.com', '1256789012', 'Alimentação', 'Promove a inclusão e adaptações necessárias para PCDs.'),
+('Tech Gadgets', '44.577.890/0001-03', 'rh@techgadgets.com', '1267890123', 'Tecnologia', 'Comprometida com a diversidade e inclusão de PCDs em seu quadro.'),
+('Eco Fashion', '55.778.901/0001-04', 'rh@ecofashion.com', '1278901234', 'Moda Sustentável', 'Adota políticas de inclusão e acessibilidade em suas operações.');
 
 
-drop table empresas;
-drop table  endereco_empresa;
-drop table vagas;
-drop table candidaturas;
-drop table feedbacks;
+INSERT INTO endereco_empresa (id_empresa, logradouro, numero, cidade, estado, cep) VALUES
+(1, 'Rua da Praia', '100', 'Fernando de Noronha', 'PE', '53990-000'),
+(2, 'Estrada do Coração', '7', 'Lençóis Maranhenses', 'MA', '65380-000'),
+(3, 'Avenida das Águas', '55', 'Bonito', 'MS', '79290-000'),
+(4, 'Rua das Orquídeas', '23', 'Chapada dos Guimarães', 'MT', '78195-000'),
+(5, 'Estrada do Sol', '200', 'Pipa', 'RN', '59178-000'),
+(6, 'Praça do Eco', '1', 'Ilha Grande', 'RJ', '23968-000'),
+(7, 'Avenida do Sagrado', '150', 'Serra da Canastra', 'MG', '37915-000'),
+(8, 'Rua das Estrelas', '42', 'Monte Verde', 'MG', '37653-000'),
+(9, 'Largo da Natureza', '8', 'Morro de São Paulo', 'BA', '45428-000'),
+(10, 'Rua do Místico', '12', 'Petrópolis', 'RJ', '25685-000'),
+(11, 'Estrada do Vento', '33', 'Canoa Quebrada', 'CE', '62800-000'),
+(12, 'Avenida das Conchas', '60', 'Ubatuba', 'SP', '11680-000'),
+(13, 'Rua do Azul', '78', 'São Miguel dos Milagres', 'AL', '57940-000'),
+(14, 'Praça das Palmeiras', '15', 'Paraty', 'RJ', '23970-000'),
+(15, 'Rua da Serpente', '99', 'Cabo Frio', 'RJ', '28907-000');
+
+alter table usuarios auto_increment = 38;
+INSERT INTO Usuarios (nome, cpf, email, telefone, tipo_deficiencia, formacao, experiencia, habilidades, curriculo) VALUES
+('Renato Silva', '111.222.333-44', 'renato.silva@email.com', '11911112222', 'Auditiva', 'Pós-graduação em Filosofia', '2 anos em ensino', 'Reflexão Crítica', 'curriculos/renato_silva.pdf'),
+('Aline Costa', '222.333.444-55', 'aline.costa@email.com', '11922223333', 'Visual', 'Graduação em Matemática', '3 anos em tutoria', 'Resolução de Problemas', 'curriculos/aline_costa.pdf'),
+('Felipe Almeida', '333.444.555-66', 'felipe.almeida@email.com', NULL, 'Auditiva', 'Ensino Técnico em Eletrônica', '1 ano em manutenção', 'Técnico', NULL),
+('Sofia Martins', '444.555.666-77', 'sofia.martins@email.com', '11933334444', NULL, 'Graduação em Direito', '5 anos como advogada', 'Negociação', 'curriculos/sofia_martins.pdf'),
+('Gabriel Pereira', '555.666.777-88', 'gabriel.pereira@email.com', '11944445555', 'Auditiva', 'Graduação em Psicologia', '2 anos em clínica', 'Aconselhamento', 'curriculos/gabriel_pereira.pdf'),
+('Laura Nascimento', '666.777.888-99', 'laura.nascimento@email.com', NULL, 'Física', 'Ensino Médio Completo', NULL, 'Atendimento ao cliente', NULL),
+('Rafael Rocha', '777.888.999-00', 'rafael.rocha@email.com', '11955556666', 'Visual', 'Graduação em Arquitetura', '3 anos em projetos', 'Criatividade', 'curriculos/rafael_rocha.pdf'),
+('Beatriz Lima', '888.999.000-11', 'beatriz.lima@email.com', NULL, NULL, 'Pós-graduação em Administração', '2 anos em gestão', 'Liderança', 'curriculos/beatriz_lima.pdf'),
+('Vinícius Santos', '999.000.111-22', 'vinicius.santos@email.com', '11966667777', 'Auditiva', 'Graduação em Ciências Contábeis', '4 anos em auditoria', 'Análise de Dados', 'curriculos/vinicius_santos.pdf'),
+('Claudia Mendes', '000.111.222-33', 'claudia.mendes@email.com', NULL, 'Física', 'Ensino Médio Completo', '1 ano em vendas', 'Persuasão', 'curriculos/claudia_mendes.pdf'),
+('Jorge Andrade', '101.222.333-44', 'jorge.andrade@email.com', NULL, NULL, 'Graduação em Comunicação', '2 anos em marketing', 'Criatividade', 'curriculos/jorge_andrade.pdf'),
+('Tais Ferreira', '111.333.444-55', 'tais.ferreira@email.com', '11977778888', 'Visual', 'Pós-graduação em Saúde Pública', '3 anos em políticas públicas', 'Pesquisa', 'curriculos/tais_ferreira.pdf'),
+('Eduardo Ribeiro', '121.444.555-66', 'eduardo.ribeiro@email.com', NULL, 'Auditiva', 'Graduação em História', '1 ano em museu', 'Organização', NULL),
+('Mariana Santos', '131.555.666-77', 'mariana.santos@email.com', '11988889999', NULL, 'Graduação em Enfermagem', '4 anos em hospital', 'Atendimento', 'curriculos/mariana_santos.pdf'),
+('Thiago Lima', '141.666.777-88', 'thiago.lima@email.com', NULL, 'Física', 'Pós-graduação em Educação Física', '2 anos em academia', 'Motivação', 'curriculos/thiago_lima.pdf'),
+('Pamela Oliveira', '151.777.888-99', 'pamela.oliveira@email.com', '11999990000', 'Visual', 'Graduação em Letras', NULL, 'Redação, Revisão', 'curriculos/pamela_oliveira.pdf'),
+('Anderson Costa', '161.888.999-00', 'anderson.costa@email.com', NULL, NULL, 'Graduação em Física', '1 ano em pesquisa', NULL, NULL);
+
+alter table usuarios auto_increment = 38;
+INSERT INTO endereco_usuario (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
+(1, 'Rua A', '123', 'São Paulo', 'SP', '01001-000'),
+(2, 'Rua B', '234', 'Rio de Janeiro', 'RJ', '22221-000'),
+(3, 'Rua C', '345', 'Belo Horizonte', 'MG', '30130-000'),
+(4, 'Rua D', '456', 'Curitiba', 'PR', '80000-000'),
+(5, 'Rua E', '567', 'Porto Alegre', 'RS', '90000-000'),
+(6, 'Rua F', '678', 'Salvador', 'BA', '40000-000'),
+(7, 'Rua G', '789', 'Fortaleza', 'CE', '60000-000'),
+(8, 'Rua H', '890', 'Manaus', 'AM', '69000-000'),
+(9, 'Rua I', '901', 'Natal', 'RN', '59000-000'),
+(10, 'Rua J', '1234', 'Florianópolis', 'SC', '88000-000'),
+(11, 'Rua K', '2345', 'João Pessoa', 'PB', '58000-000'),
+(12, 'Rua L', '3456', 'Vitória', 'ES', '29000-000'),
+(13, 'Rua M', '4567', 'Goiânia', 'GO', '74000-000'),
+(14, 'Rua N', '5678', 'Maceió', 'AL', '57000-000'),
+(15, 'Rua O', '6789', 'Campo Grande', 'MS', '79000-000'),
+(16, 'Rua P', '7890', 'Cuiabá', 'MT', '78000-000');
+
+
+INSERT INTO candidaturas (id_usuario, id_vaga, status) VALUES
+(1, 1, 'Aprovado'),
+(2, 2, 'Aprovado'),
+(3, 3, 'Rejeitado'),
+(4, 4, 'Aprovado'),
+(5, 5, 'Pendente'),
+(6, 6, 'Aprovado'),
+(7, 7, 'Rejeitado'),
+(8, 8, 'Aprovado'),
+(9, 9, 'Aprovado'),
+(11, 11, 'Rejeitado'),
+(12, 12, 'Aprovado'),
+(13, 13, 'Pendente'),
+(14, 14, 'Aprovado'),
+(15, 15, 'Rejeitado'),
+(16, 16, 'Aprovado');
+
+
+INSERT INTO vagas (titulo, descricao, requisitos, salario, tipo_contratacao, localizacao, id_empresa) VALUES
+("Desenvolvedor Frontend", "Criar interfaces e experiências de usuário para aplicações web.", "Conhecimento em React.js e CSS.", 7000.00, "CLT", "São Paulo, SP", 1),
+("Arquiteto de Software", "Projetar e definir arquiteturas de software.", "Experiência em design de sistemas e frameworks.", 11000.00, "CLT", "Campinas, SP", 2),
+("Analista de Marketing Digital", "Desenvolver campanhas de marketing online.", "Experiência em SEO e Google Ads.", 5500.00, "CLT", "Belo Horizonte, MG", 3),
+("Mecânico de Manutenção", "Realizar manutenção preventiva e corretiva em máquinas.", "Experiência em manutenção mecânica.", 4000.00, "CLT", "Cuiabá, MT", 4),
+("Gerente de Projetos de TI", "Gerenciar projetos de tecnologia da informação.", "Certificação PMP e experiência em gestão de projetos.", 13000.00, "CLT", "Rio de Janeiro, RJ", 5),
+("Desenvolvedor Mobile", "Desenvolver aplicações móveis para iOS e Android.", "Experiência com Flutter ou React Native.", 8000.00, "CLT", "São Paulo, SP", 6),
+("Engenheiro de Segurança do Trabalho", "Implementar políticas de segurança no trabalho.", "Formação em Engenharia e NR-10.", 9000.00, "CLT", "Salvador, BA", 7),
+("Analista de Comércio Exterior", "Gerenciar importações e exportações.", "Experiência em legislação de comércio internacional.", 6000.00, "CLT", "Recife, PE", 8),
+("Assistente Administrativo", "Auxiliar nas rotinas administrativas da empresa.", "Cursando Administração ou áreas afins.", 2500.00, "CLT", "Fortaleza, CE", 9),
+("Analista de Business Intelligence", "Analisar dados para tomada de decisões estratégicas.", "Conhecimento em ferramentas de BI e SQL.", 8000.00, "CLT", "Porto Alegre, RS", 10),
+("Técnico em Enfermagem do Trabalho", "Realizar atendimento a funcionários e apoiar em saúde ocupacional.", "Experiência em enfermagem e curso técnico.", 4500.00, "CLT", "São Paulo, SP", 11),
+("Coordenador de Vendas", "Gerenciar equipe de vendas e resultados.", "Experiência em gestão comercial e metas.", 10000.00, "CLT", "Goiânia, GO", 12),
+("Gestor de E-commerce", "Gerenciar loja online e estratégias de vendas.", "Experiência em e-commerce e marketing digital.", 8000.00, "CLT", "Campo Grande, MS", 13),
+("Estágio em Administração", "Auxiliar nas atividades do departamento administrativo.", "Cursando Administração.", 1200.00, "Estágio", "João Pessoa, PB", 14),
+("Agente de Viagens", "Planejar e organizar viagens para clientes.", "Experiência em turismo e atendimento ao cliente.", 4000.00, "CLT", "Natal, RN", 15),
+("Analista de Dados Júnior", "Auxiliar na coleta e análise de dados.", "Cursando áreas relacionadas e conhecimento básico em Excel.", 3000.00, "CLT", "Maceió, AL", 16),
+("Educador Social", "Desenvolver atividades educativas e sociais.", "Experiência com grupos sociais e formação na área.", 3500.00, "CLT", "Teresina, PI", 17),
+("Analista de Redes", "Gerenciar e monitorar redes de computadores.", "Certificações em redes e conhecimento em segurança da informação.", 7000.00, "CLT", "Florianópolis, SC", 18),
+("Estagiário em Recursos Humanos", "Apoiar nas atividades de recrutamento e seleção.", "Cursando Psicologia ou Recursos Humanos.", 1000.00, "Estágio", "Palmas, TO", 19),
+("Técnico em Eletrônica", "Realizar manutenção e reparo de equipamentos eletrônicos.", "Experiência em eletrônica e circuitos.", 4000.00, "CLT", "Manaus, AM", 20),
+("Analista Fiscal", "Gerenciar questões fiscais e tributárias da empresa.", "Experiência na área fiscal e conhecimento em legislação.", 6000.00, "CLT", "Rio Branco, AC", 21),
+("Coordenador de Qualidade", "Supervisionar processos de controle de qualidade.", "Experiência em qualidade e normatização.", 7500.00, "CLT", "Boa Vista, RR", 22),
+("Assistente de Atendimento ao Cliente", "Atender e solucionar dúvidas de clientes.", "Experiência em atendimento ao cliente.", 2500.00, "CLT", "São Luís, MA", 23),
+("Gerente de Produtos", "Desenvolver e gerenciar o portfólio de produtos.", "Experiência em gestão de produtos e mercado.", 11000.00, "CLT", "São Paulo, SP", 24),
+("Instrutor de Cursos Livres", "Ministrar aulas e cursos em diversas áreas.", "Experiência em ensino e formação na área.", 5000.00, "CLT", "Vitória, ES", 25);
+
+
+SET FOREIGN_KEY_CHECKS = 1;
+
