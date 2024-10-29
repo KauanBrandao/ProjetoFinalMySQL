@@ -682,3 +682,134 @@ WHERE salario > 5000 AND NOT localizacao = 'Sao Paulo';
 SELECT * 
 FROM enderecos_empresas 
 WHERE estado IN ('BA', 'PE', 'CE');
+
+
+		-- Total de inscritos em cada vaga
+SELECT 
+	v.titulo,
+	e.nome_empresa,
+	COUNT(C.id_usuario) AS total_inscritos 
+FROM 
+	candidaturas c 
+JOIN usuarios u 
+	ON c.id_usuario = u.id_usuario 
+JOIN  vagas v 
+	ON v.id_vaga = c.id_vaga 
+JOIN empresas e ON v.id_empresa = e.id_empresa
+	GROUP BY v.titulo, e.nome_empresa
+	ORDER BY v.titulo, e.nome_empresa;
+        
+        
+        -- Candidatos que nao se inscreveram em nenhuma vaga
+SELECT * 
+FROM candidaturas c
+RIGHT JOIN usuarios u
+	ON c.id_usuario = u.id_usuario
+WHERE id_candidatura IS NULL;
+
+	-- Candidatos que nao se inscreveram em nenhuma vaga (outra forma)
+SELECT * 
+FROM usuarios u
+LEFT JOIN candidaturas c
+	ON c.id_usuario = u.id_usuario
+WHERE id_candidatura IS NULL;
+
+
+-- 	View para ver as informacoes atuais de cada vaga juntamente com a quantidade de inscritos 
+
+CREATE VIEW v_informacoes_vagas AS 
+SELECT 
+	titulo,
+	descricao,
+	requisitos,
+	salario,
+	tipo_contratacao,
+	localizacao,
+	e.nome_empresa,
+    COUNT(c.id_usuario) AS total_candidaturas
+	FROM vagas v
+    JOIN empresas e
+		ON v.id_empresa = e.id_empresa
+	LEFT JOIN candidaturas c
+		ON v.id_vaga = c.id_vaga
+	GROUP BY v.titulo, v.descricao, v.requisitos, v.salario, 
+			v.tipo_contratacao, v.localizacao, e.nome_empresa
+	ORDER BY v.titulo;
+    
+    SELECT *
+    FROM v_informacoes_vagas;
+    
+    
+    -- Procedure para criar uma nova vaga e retornar o ID da vaga criada 
+    DELIMITER $$
+    
+    CREATE PROCEDURE p_adicionar_vaga (
+    IN p_titulo VARCHAR(100),
+    IN p_descricao TEXT,
+    IN p_requisitos TEXT,
+    IN p_salario DECIMAL(10,2),
+    IN p_tipo_contracao VARCHAR(20),
+    IN p_localizacao VARCHAR(100),
+    IN p_id_empresa INT
+    ) 
+    BEGIN 
+    INSERT INTO vagas(titulo, descricao, requisitos, salario, tipo_contratacao, localizacao, id_empresa)
+    VALUES (p_titulo, p_descricao, p_requisitos, p_salario, p_tipo_contracao, p_localizacao, p_id_empresa);
+    
+    SELECT LAST_INSERT_ID() AS id_vaga_criada;
+		
+    END $$
+    
+    DELIMITER ;
+    
+    CALL p_adicionar_vaga('Scrum Master', 'Ter experiencia em Scrum', 'Graduacao em engenharia de Software', 8000, 'CLT', 'Bahia', 1);
+    
+    
+    
+    -- Function para retornar as vagas em uma determinada regiao 
+    DELIMITER $$
+    
+CREATE FUNCTION f_vagas_localidade (f_localizacao VARCHAR(100)) 
+RETURNS INT 
+DETERMINISTIC
+BEGIN 
+	DECLARE total_vagas INT;
+    
+	SELECT COUNT(*) INTO total_vagas
+    FROM vagas
+    WHERE localizacao = f_localizacao;
+	
+    RETURN total_vagas;
+END $$
+	
+    
+    CREATE TABLE controle_usuario (
+    id_usuario INT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    cpf VARCHAR(14),
+    data_exclusao DATETIME
+    );
+    
+DELIMITER ;
+
+SELECT f_vagas_localidade('Sao Paulo');
+
+DELIMITER $$
+
+CREATE TRIGGER 	controle_delete
+BEFORE DELETE ON usuarios 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO controle_usuario(id_usuario, nome, email, cpf, data_exclusao) VALUES 
+    (OLD.id_usuario, OLD.nome, OLD.email, OLD.cpf, NOW());
+    
+END $$
+
+DELIMITER ;
+
+DROP TRIGGER controle_delete;
+
+DELETE FROM 
+usuarios 
+WHERE id_usuario = 101;
