@@ -683,6 +683,103 @@ SELECT *
 FROM enderecos_empresas 
 WHERE estado IN ('BA', 'PE', 'CE');
 
+CREATE VIEW v_informacoes_vagas AS 
+SELECT 
+	titulo,
+	descricao,
+	requisitos,
+	salario,
+	tipo_contratacao,
+	localizacao,
+	e.nome_empresa,
+    COUNT(c.id_usuario) AS total_candidaturas
+	FROM vagas v
+    JOIN empresas e
+		ON v.id_empresa = e.id_empresa
+	LEFT JOIN candidaturas c
+		ON v.id_vaga = c.id_vaga
+	GROUP BY v.titulo, v.descricao, v.requisitos, v.salario, 
+			v.tipo_contratacao, v.localizacao, e.nome_empresa
+	ORDER BY v.titulo;
+    
+    SELECT *
+    FROM v_informacoes_vagas;
+    
+    
+    -- Procedure para criar uma nova vaga e retornar o ID da vaga criada 
+    DELIMITER $$
+    
+    CREATE PROCEDURE p_adicionar_vaga (
+    IN p_titulo VARCHAR(100),
+    IN p_descricao TEXT,
+    IN p_requisitos TEXT,
+    IN p_salario DECIMAL(10,2),
+    IN p_tipo_contracao VARCHAR(20),
+    IN p_localizacao VARCHAR(100),
+    IN p_id_empresa INT
+    ) 
+    BEGIN 
+    INSERT INTO vagas(titulo, descricao, requisitos, salario, tipo_contratacao, localizacao, id_empresa)
+    VALUES (p_titulo, p_descricao, p_requisitos, p_salario, p_tipo_contracao, p_localizacao, p_id_empresa);
+    
+    SELECT LAST_INSERT_ID() AS id_vaga_criada;
+		
+    END $$
+    
+    DELIMITER ;
+    
+    CALL p_adicionar_vaga('Scrum Master', 'Ter experiencia em Scrum', 'Graduacao em engenharia de Software', 8000, 'CLT', 'Bahia', 1);
+    
+    
+    
+    -- Function para retornar as vagas em uma determinada regiao 
+    DELIMITER $$
+    
+CREATE FUNCTION f_vagas_localidade (f_localizacao VARCHAR(100)) 
+RETURNS INT 
+DETERMINISTIC
+BEGIN 
+	DECLARE total_vagas INT;
+    
+	SELECT COUNT(*) INTO total_vagas
+    FROM vagas
+    WHERE localizacao = f_localizacao;
+	
+    RETURN total_vagas;
+END $$
+	
+    
+    CREATE TABLE controle_usuario (
+    id_usuario INT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    cpf VARCHAR(14),
+    data_exclusao DATETIME
+    );
+    
+DELIMITER ;
+
+SELECT f_vagas_localidade('Sao Paulo');
+
+DELIMITER $$
+
+CREATE TRIGGER 	controle_delete
+BEFORE DELETE ON usuarios 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO controle_usuario(id_usuario, nome, email, cpf, data_exclusao) VALUES 
+    (OLD.id_usuario, OLD.nome, OLD.email, OLD.cpf, NOW());
+    
+END $$
+
+DELIMITER ;
+
+DROP TRIGGER controle_delete;
+
+DELETE FROM 
+usuarios 
+WHERE id_usuario = 101;
+
 CREATE VIEW usuarios_vagas AS
 SELECT u.nome AS nome_usuario,
        u.email AS email_usuario,
@@ -716,6 +813,9 @@ BEFORE UPDATE ON feedbacks
 FOR EACH ROW
 SET NEW.data_feedback = CURRENT_TIMESTAMP;
 
+
+DELIMITER $$
+
 CREATE TRIGGER verifica_vaga_contratacao
 BEFORE INSERT ON vagas
 FOR EACH ROW
@@ -723,16 +823,27 @@ BEGIN
    IF NEW.tipo_contratacao IS NULL OR NEW.tipo_contratacao = '' THEN
       SET NEW.tipo_contratacao = 'CLT';
    END IF;
-END;
+END $$
 
-CREATE FUNCTION contar_vagas_empresa(emp_id INT) RETURNS INT
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE FUNCTION contar_vagas_empresa(emp_id INT) 
+RETURNS INT
+DETERMINISTIC
 BEGIN
    DECLARE total_vagas INT;
    SELECT COUNT(*) INTO total_vagas
    FROM vagas
    WHERE id_empresa = emp_id;
    RETURN total_vagas;
-END;
+END $$
+
+DELIMITER ;
+
+
+DELIMITER $$
 
 CREATE PROCEDURE atualizar_status_candidatura(
     IN candidatura_id INT,
@@ -742,4 +853,29 @@ BEGIN
    UPDATE candidaturas
    SET status = novo_status
    WHERE id_candidatura = candidatura_id;
-END;
+END $$
+
+DELIMITER ;
+
+
+
+CREATE VIEW v_RELATORIO_VAGAS_EMPRESAS AS
+SELECT 
+    e.nome_empresa,
+    v.titulo AS titulo_vaga,
+    COUNT(CASE WHEN c.status = 'Em análise' OR c.status = 'Disponível' THEN 1 END) AS vagas_disponiveis,
+    COUNT(CASE WHEN c.status = 'Ocupada' THEN 1 END) AS vagas_ocupadas
+FROM 
+    empresas e
+JOIN 
+    vagas v ON e.id_empresa = v.id_empresa
+LEFT JOIN 
+    candidaturas c ON v.id_vaga = c.id_vaga
+GROUP BY 
+    e.nome_empresa, v.titulo
+HAVING 
+    vagas_disponiveis > 0 OR vagas_ocupadas > 0;
+
+select * from v_relatorio_vagas_empresas;
+
+
