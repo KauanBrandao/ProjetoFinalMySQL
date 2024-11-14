@@ -682,3 +682,64 @@ WHERE salario > 5000 AND NOT localizacao = 'Sao Paulo';
 SELECT * 
 FROM enderecos_empresas 
 WHERE estado IN ('BA', 'PE', 'CE');
+
+CREATE VIEW usuarios_vagas AS
+SELECT u.nome AS nome_usuario,
+       u.email AS email_usuario,
+       v.titulo AS titulo_vaga,
+       c.status AS status_candidatura,
+       c.data_aplicacao
+FROM usuarios u
+JOIN candidaturas c ON u.id_usuario = c.id_usuario
+JOIN vagas v ON c.id_vaga = v.id_vaga;
+
+CREATE VIEW empresas_vagas AS
+SELECT e.nome_empresa,
+       v.titulo AS titulo_vaga,
+       v.descricao,
+       v.salario,
+       v.tipo_contratacao
+FROM empresas e
+JOIN vagas v ON e.id_empresa = v.id_empresa;
+
+CREATE VIEW feedbacks_usuario AS
+SELECT u.nome AS nome_usuario,
+       e.nome_empresa AS nome_empresa,
+       f.conteudo AS conteudo_feedback,
+       f.data_feedback
+FROM feedbacks f
+JOIN usuarios u ON f.id_usuario = u.id_usuario
+JOIN empresas e ON f.id_empresa = e.id_empresa;
+
+CREATE TRIGGER atualiza_data_feedback
+BEFORE UPDATE ON feedbacks
+FOR EACH ROW
+SET NEW.data_feedback = CURRENT_TIMESTAMP;
+
+CREATE TRIGGER verifica_vaga_contratacao
+BEFORE INSERT ON vagas
+FOR EACH ROW
+BEGIN
+   IF NEW.tipo_contratacao IS NULL OR NEW.tipo_contratacao = '' THEN
+      SET NEW.tipo_contratacao = 'CLT';
+   END IF;
+END;
+
+CREATE FUNCTION contar_vagas_empresa(emp_id INT) RETURNS INT
+BEGIN
+   DECLARE total_vagas INT;
+   SELECT COUNT(*) INTO total_vagas
+   FROM vagas
+   WHERE id_empresa = emp_id;
+   RETURN total_vagas;
+END;
+
+CREATE PROCEDURE atualizar_status_candidatura(
+    IN candidatura_id INT,
+    IN novo_status VARCHAR(20)
+)
+BEGIN
+   UPDATE candidaturas
+   SET status = novo_status
+   WHERE id_candidatura = candidatura_id;
+END;
