@@ -1,5 +1,5 @@
-CREATE DATABASE EmpregabilidadePCD1;
-USE EmpregabilidadePCD1;
+CREATE DATABASE EmpregabilidadePCD0001;
+USE EmpregabilidadePCD0001;
 
 
 CREATE TABLE usuarios (
@@ -15,7 +15,7 @@ CREATE TABLE usuarios (
     curriculo VARCHAR(255) 
 );
 
-CREATE TABLE endereco_usuario (
+CREATE TABLE enderecos_usuarios (
     id_endereco_usuario INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT,
     logradouro VARCHAR(100) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE empresas (
     politica_inclusao TEXT
 );
 
-CREATE TABLE endereco_empresa (
+CREATE TABLE enderecos_empresas (
     id_endereco_empresa INT AUTO_INCREMENT PRIMARY KEY,
     id_empresa INT,
     logradouro VARCHAR(100) NOT NULL,
@@ -87,7 +87,6 @@ ADD COLUMN datanascimento DATE
 AFTER telefone;
 
 
-alter table enderecos_empresas auto_increment = 30;
 SET FOREIGN_KEY_CHECKS = 0;
 
 INSERT INTO usuarios (nome, email, cpf, telefone, tipo_deficiencia, formacao, experiencia, habilidades, curriculo, datanascimento) VALUES
@@ -198,8 +197,7 @@ INSERT INTO usuarios (nome, email, cpf, telefone, tipo_deficiencia, formacao, ex
 ('Isabela Lopes', 'isabela.lopes99@example.com', '600.666.777-88', '(41) 90123-2345', 'nenhuma', 'Ensino Técnico em Informática', '3 anos em suporte de TI', 'Suporte, Configuração', 'curriculo_isabela.pdf', '1993-03-10'),
 ('Juliana Ferreira', 'juliana.ferreira100@example.com', '611.777.888-99', '(51) 91234-3456', 'visual', 'Graduação em Ciências Biológicas', '5 anos em laboratório', 'Biologia, Pesquisa, Análise', 'curriculo_juliana.pdf', '1992-05-11');
 
-alter table enderecos_usuarios auto_increment = 100;
-INSERT INTO endereco_usuario (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
+INSERT INTO enderecos_usuarios (id_usuario, logradouro, numero, cidade, estado, cep) VALUES
 (1, 'Rua das Flores', '120', 'São Paulo', 'SP', '01001-000'),
 (2, 'Av. Paulista', '500', 'São Paulo', 'SP', '01310-000'),
 (3, 'Rua XV de Novembro', '150', 'Curitiba', 'PR', '80020-310'),
@@ -344,7 +342,7 @@ INSERT INTO empresas (nome_empresa, cnpj, email_contato, telefone_contato, setor
 ('Universidade Aberta', '78.901.234/0001-18', 'contato@universidadeaberta.com', '(11) 8901-0012', 'Educação', 'Inclusão de professores e administrativos com deficiência'),
 ('Fabrica Global', '89.012.345/0001-19', 'contato@fabricaglobal.com', '(21) 9012-1123', 'Indústria', 'Inclusão de operários com deficiência em setores de produção'),
 ('Clinica Bem Estar', '90.123.456/0001-20', 'contato@clinicabemestar.com', '(31) 0123-2234', 'Saúde', 'Promoção de acessibilidade em atendimento e áreas de suporte');
-alter table enderecos_empresas auto_increment = 0;
+
 
 INSERT INTO enderecos_empresas (id_empresa, logradouro, numero, cidade, estado, cep) VALUES
 (1, 'Rua da Inovação', '100', 'São Paulo', 'SP', '01001-000'),
@@ -776,9 +774,6 @@ DELIMITER ;
 
 DROP TRIGGER controle_delete;
 
-DELETE FROM 
-usuarios 
-WHERE id_usuario = 101;
 
 CREATE VIEW usuarios_vagas AS
 SELECT u.nome AS nome_usuario,
@@ -790,23 +785,7 @@ FROM usuarios u
 JOIN candidaturas c ON u.id_usuario = c.id_usuario
 JOIN vagas v ON c.id_vaga = v.id_vaga;
 
-CREATE VIEW empresas_vagas AS
-SELECT e.nome_empresa,
-       v.titulo AS titulo_vaga,
-       v.descricao,
-       v.salario,
-       v.tipo_contratacao
-FROM empresas e
-JOIN vagas v ON e.id_empresa = v.id_empresa;
 
-CREATE VIEW feedbacks_usuario AS
-SELECT u.nome AS nome_usuario,
-       e.nome_empresa AS nome_empresa,
-       f.conteudo AS conteudo_feedback,
-       f.data_feedback
-FROM feedbacks f
-JOIN usuarios u ON f.id_usuario = u.id_usuario
-JOIN empresas e ON f.id_empresa = e.id_empresa;
 
 CREATE TRIGGER atualiza_data_feedback
 BEFORE UPDATE ON feedbacks
@@ -906,7 +885,7 @@ FROM
 GROUP BY 
     localizacao;
     
-select * from v_salarios_por_localidade;
+
 
 CREATE VIEW v_candidaturas_recentes AS
 SELECT 
@@ -1011,6 +990,5 @@ END $$
 
 DELIMITER ;
 
-DELETE FROM empresas 
-WHERE id_empresa = 29;
+
 
