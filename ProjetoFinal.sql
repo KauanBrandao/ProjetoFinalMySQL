@@ -990,5 +990,43 @@ END $$
 
 DELIMITER ;
 
+DROP VIEW IF EXISTS v_informacoes_vagas;
+DROP VIEW IF EXISTS v_empresas_feedbacks;
 
 
+CREATE VIEW v_detalhes_vagas AS
+SELECT 
+    v.id_vaga,
+    v.titulo AS titulo_vaga,
+    v.descricao,
+    v.requisitos,
+    v.salario,
+    v.tipo_contratacao,
+    e.nome_empresa,
+    e.setor AS setor_empresa,
+    v.localizacao
+FROM 
+    vagas v
+JOIN 
+    empresas e ON v.id_empresa = e.id_empresa;
+
+SELECT * FROM v_detalhes_vagas;
+
+
+CREATE VIEW v_feedbacks_detalhados AS
+SELECT 
+    f.id_feedback,
+    u.nome AS nome_usuario,
+    u.email AS email_usuario,
+    e.nome_empresa,
+    f.conteudo AS conteudo_feedback,
+    f.data_feedback
+FROM 
+    feedbacks f
+LEFT JOIN 
+    usuarios u ON f.id_usuario = u.id_usuario
+LEFT JOIN 
+    empresas e ON f.id_empresa = e.id_empresa;
+    
+    SELECT * FROM v_feedbacks_detalhados;
+    
