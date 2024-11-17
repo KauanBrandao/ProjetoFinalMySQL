@@ -878,4 +878,139 @@ HAVING
 
 select * from v_relatorio_vagas_empresas;
 
+-- Classifica as empresas com base no número de vagas cadastradas
+CREATE VIEW v_ranking_empresas AS
+SELECT 
+    e.nome_empresa,
+    COUNT(v.id_vaga) AS total_vagas
+FROM 
+    empresas e
+LEFT JOIN 
+    vagas v ON e.id_empresa = v.id_empresa
+GROUP BY 
+    e.nome_empresa
+ORDER BY 
+    total_vagas DESC;
+    
+    
+select * from v_ranking_empresas;
+
+-- Média dos sálarios mínimos e máximos com base nas vagas cadastradas de cada cidade
+CREATE VIEW v_salarios_por_localidade AS
+SELECT 
+    localizacao,
+    MIN(salario) AS salario_minimo,
+    MAX(salario) AS salario_maximo
+FROM 
+    vagas
+GROUP BY 
+    localizacao;
+    
+select * from v_salarios_por_localidade;
+
+CREATE VIEW v_candidaturas_recentes AS
+SELECT 
+    c.id_candidatura,
+    u.nome AS nome_usuario,
+    v.titulo AS titulo_vaga,
+    c.data_aplicacao,
+    c.status
+FROM 
+    candidaturas c
+JOIN 
+    usuarios u ON c.id_usuario = u.id_usuario
+JOIN 
+    vagas v ON c.id_vaga = v.id_vaga
+WHERE 
+    c.data_aplicacao >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
+ORDER BY 
+    c.data_aplicacao DESC;
+    
+select * from v_candidaturas_recentes;
+
+DELIMITER $$
+
+CREATE PROCEDURE p_excluir_usuario (
+    IN p_id_usuario INT
+)
+BEGIN
+    DELETE FROM candidaturas 
+    WHERE id_usuario = p_id_usuario;
+    
+    DELETE FROM usuarios 
+    WHERE id_usuario = p_id_usuario;
+END $$
+
+DELIMITER ;
+
+CALL p_excluir_usuario(101);
+
+DELIMITER $$
+
+DELIMITER $$
+
+CREATE PROCEDURE p_adicionar_empresa (
+    IN p_nome_empresa VARCHAR(100),
+    IN p_cnpj VARCHAR(18),
+    IN p_email_contato VARCHAR(100),
+    IN p_telefone_contato VARCHAR(15),
+    IN p_setor VARCHAR(50),
+    IN p_politica_inclusao TEXT
+)
+BEGIN
+    INSERT INTO empresas (nome_empresa, cnpj, email_contato, telefone_contato, setor, politica_inclusao)
+    VALUES (p_nome_empresa, p_cnpj, p_email_contato, p_telefone_contato, p_setor, p_politica_inclusao);
+    
+    -- Retorna o ID da empresa recém-criada
+    SELECT LAST_INSERT_ID() AS id_empresa_criada;
+END $$
+
+DELIMITER ;
+
+CALL p_adicionar_empresa(
+    'Senai', 
+    '12.345.678/0001-99', 
+    'contato@senai.com', 
+    '(75) 98765-4321', 
+    'Educação', 
+    'Política de inclusão: Ensino de qualidade.'
+);
+
+select * from empresas;
+
+
+DELIMITER $$
+
+CREATE FUNCTION f_total_candidaturas_usuario(id_usuario INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE total_candidaturas INT;
+    
+    SELECT COUNT(*) INTO total_candidaturas
+    FROM candidaturas c
+    WHERE c.id_usuario = id_usuario;
+    
+    RETURN total_candidaturas;
+END $$
+
+DELIMITER ;
+
+SELECT f_total_candidaturas_usuario(10) AS total_candidaturas;
+
+DELIMITER $$
+CREATE TRIGGER tg_prevenir_exclusao_empresa
+BEFORE DELETE ON empresas
+FOR EACH ROW
+BEGIN
+    IF EXISTS (SELECT 1 FROM vagas WHERE id_empresa = OLD.id_empresa) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Não é possível excluir a empresa enquanto houver vagas cadastradas.';
+    END IF;
+END $$
+
+DELIMITER ;
+
+DELETE FROM empresas 
+WHERE id_empresa = 29;
 
